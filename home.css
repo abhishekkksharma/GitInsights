@@ -2,11 +2,24 @@ body {
   margin: 0;
   height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  background-image: linear-gradient(0deg, #ffffff 0%, #97D9E1 100%);
-    background-attachment: fixed;
-  background-size: cover;
-  padding-top: 60px;
+  background: radial-gradient(circle at center, 
+    #000000 0%, 
+    #17153B 50%, 
+    #000000 100%);
+  background-size: 200% 200%;
+  animation: gradientAnimation 30s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .navbar {
@@ -20,7 +33,7 @@ body {
   left: 20%;
   right: 20%;
   z-index: 1000;
-  border: 1px solid white;  /* Add white border */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Lighter border for better contrast */
 }
 
 .navbar-container {
@@ -37,6 +50,7 @@ body {
   align-items: center;
   width: 100%;
 }
+
 .navbar-icon {
   width: 35px;  /* You can adjust the size */
   height: 35px;
@@ -44,9 +58,8 @@ body {
   margin-right: 8px;  /* Space between icon and text */
 }
 
-
 .navbar-item {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255); /* White text for better contrast on dark background */
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 20px;
@@ -68,8 +81,8 @@ body {
 /* Responsive Styles for Mobile */
 @media (max-width: 768px) {
   .navbar {
-    left: 20%;
-    right: 20%;
+    left: 10%;
+    right: 10%;
     height: 40px;
     align-self: center;
   }
@@ -87,13 +100,12 @@ body {
     padding: 0px;
   }
 }
+
 @media (max-width: 480px) {
   .navbar {
-    left: 10%;
-    right: 10%;
+    left: 5%;
+    right: 5%;
     height: 35px;
     align-self: center;
   }
-
-
 }
