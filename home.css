@@ -1,13 +1,66 @@
+/* Light Theme */
+body.light-theme {
+  background: radial-gradient(circle at bottom, 
+    #ffffff 0%, 
+    #b7b1f28d 50%, 
+    #ffffff 100%
+    );
+}
+
+body.light-theme .navbar {
+  background: rgba(255, 255, 255, 0.267); /* Darker background for contrast */
+  border: 1px solid rgba(0, 0, 0, 0.3); /* Darker border */
+}
+
+body.light-theme .navbar-item {
+  color: rgb(0, 0, 0); /* Black text for light theme */
+}
+
+body.light-theme .navbar-item:hover {
+  background: rgb(255, 255, 255); /* Darker hover effect */
+}
+
+/* Toggle Button Styling */
+.theme-toggle-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 34px; /* Fixed width for circle */
+  height: 34px; /* Fixed height for circle */
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+body.light-theme .theme-toggle-button:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.theme-toggle-button .navbar-icon {
+  width: 35px; /* Adjust icon size */
+  height: 35px;
+  filter: invert(0); /* Make icon white in dark theme */
+}
+
+body.light-theme .theme-toggle-button .navbar-icon {
+  filter: invert(1); /* Make icon black in light theme */
+}
 body {
   margin: 0;
   height: 100vh;
   font-family: Arial, sans-serif;
   background: radial-gradient(circle at center, 
     #000000 0%, 
-    #17153B 50%, 
+    #030637 50%, 
     #000000 100%);
   background-size: 200% 200%;
-  animation: gradientAnimation 30s ease infinite;
+  animation: gradientAnimation 40s ease infinite;
 }
 
 @keyframes gradientAnimation {
@@ -56,6 +109,7 @@ body {
   height: 35px;
   border-radius: 18px;
   margin-right: 8px;  /* Space between icon and text */
+  /* opacity: .7; */
 }
 
 .navbar-item {

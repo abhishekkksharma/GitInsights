@@ -28,10 +28,35 @@
           </a>
           <a href="#" class="navbar-item">
             <img src="https://i.pinimg.com/474x/3c/ae/07/3cae079ca0b9e55ec6bfc1b358c9b1e2.jpg" alt="Sign up" class="navbar-icon">
-          <span>Sign up</span>
+            <span>Sign up</span>
           </a>
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle" class="navbar-item theme-toggle-button">
+            <img src="https://i.pinimg.com/736x/44/60/ea/4460ea86bcd6973935f1f1c8fa1fc4da.jpg" alt="Theme Toggle" class="navbar-icon">
+          </button>
         </div>
       </div>
     </nav>
+
+    <script>
+      // JavaScript for Theme Toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+
+      // Check for saved theme in localStorage
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        body.classList.add(savedTheme);
+      }
+
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light-theme');
+        if (body.classList.contains('light-theme')) {
+          localStorage.setItem('theme', 'light-theme');
+        } else {
+          localStorage.setItem('theme', '');
+        }
+      });
+    </script>
   </body>
 </html>
