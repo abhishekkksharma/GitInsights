@@ -1,10 +1,8 @@
 /* Light Theme */
 body.light-theme {
-  background: radial-gradient(circle at bottom, 
-    #ffffff 0%, 
-    #b7b1f28d 50%, 
-    #ffffff 100%
-    );
+background-color: #8BC6EC;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #ffffff 100%);
+
 }
 
 body.light-theme .navbar {
@@ -39,7 +37,7 @@ body.light-theme .navbar-item:hover {
 }
 
 body.light-theme .theme-toggle-button:hover {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgb(255, 255, 255); /* Darker hover effect */
 }
 
 .theme-toggle-button .navbar-icon {
