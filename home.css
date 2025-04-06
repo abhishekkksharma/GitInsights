@@ -1,8 +1,7 @@
 /* Light Theme */
 body.light-theme {
-background-color: #8BC6EC;
-background-image: linear-gradient(135deg, #8BC6EC 0%, #ffffff 100%);
-
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #ffffff 100%);
 }
 
 body.light-theme .navbar {
@@ -53,10 +52,12 @@ body {
   margin: 0;
   height: 100vh;
   font-family: Arial, sans-serif;
-  background: radial-gradient(circle at center, 
-    #000000 0%, 
-    #030637 50%, 
-    #000000 100%);
+  background: radial-gradient(
+    circle at center,
+    #000000 0%,
+    #030637 50%,
+    #000000 100%
+  );
   background-size: 200% 200%;
   animation: gradientAnimation 40s ease infinite;
 }
@@ -103,15 +104,19 @@ body {
 }
 
 .navbar-icon {
-  width: 35px;  /* You can adjust the size */
+  width: 35px; /* You can adjust the size */
   height: 35px;
   border-radius: 18px;
-  margin-right: 8px;  /* Space between icon and text */
+  margin-right: 8px; /* Space between icon and text */
   /* opacity: .7; */
 }
 
 .navbar-item {
-  color: rgb(255, 255, 255); /* White text for better contrast on dark background */
+  color: rgb(
+    255,
+    255,
+    255
+  ); /* White text for better contrast on dark background */
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 20px;
@@ -131,6 +136,17 @@ body {
 }
 
 /* Responsive Styles for Mobile */
+@media (max-width: 1200px) {
+  .navbar {
+    left: 10%;
+    right: 10%;
+    align-self: center;
+  }
+  .navbar-items {
+    justify-content: space-between;
+    padding: 0px;
+  }
+}
 @media (max-width: 768px) {
   .navbar {
     left: 10%;
@@ -160,4 +176,9 @@ body {
     height: 35px;
     align-self: center;
   }
+  .navbar-items :hover {
+    padding: 0px;
+    margin: 0%;
+  }
+
 }
