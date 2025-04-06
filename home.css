@@ -2,15 +2,18 @@
 body.light-theme {
   background-color: #8bc6ec;
   background-image: linear-gradient(135deg, #8bc6ec 0%, #ffffff 100%);
+  
 }
 
 body.light-theme .navbar {
   background: rgba(255, 255, 255, 0.267); /* Darker background for contrast */
   border: 1px solid rgba(0, 0, 0, 0.3); /* Darker border */
+  
 }
 
 body.light-theme .navbar-item {
   color: rgb(0, 0, 0); /* Black text for light theme */
+
 }
 
 body.light-theme .navbar-item:hover {
@@ -33,6 +36,7 @@ body.light-theme .navbar-item:hover {
 
 .theme-toggle-button:hover {
   background: rgba(255, 255, 255, 0.4);
+  
 }
 
 body.light-theme .theme-toggle-button:hover {
@@ -107,8 +111,11 @@ body {
   width: 35px; /* You can adjust the size */
   height: 35px;
   border-radius: 18px;
-  margin-right: 8px; /* Space between icon and text */
   /* opacity: .7; */
+  
+}
+.navbar-item span{
+  margin-left: 8px;
 }
 
 .navbar-item {
@@ -125,6 +132,7 @@ body {
   align-items: center;
   gap: 8px;
 }
+
 
 .navbar-item:hover {
   background: rgba(255, 255, 255, 0.4);
@@ -178,7 +186,6 @@ body {
   }
   .navbar-items :hover {
     padding: 0px;
-    margin: 0%;
   }
 
 }
