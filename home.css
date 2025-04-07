@@ -171,6 +171,12 @@ body {
   background-color: #ffffff;
   border-radius: 30px;
   border: solid 1px white;
+  font-size: 40px;
+  color: #826aa0;
+  font-weight: 800;
+  font-family:'Times New Roman', Times, serif;
+  padding-left: 10%;
+  padding-top: 10%
 }
 
 .div2 {
@@ -179,6 +185,8 @@ body {
   background-color: #f5f5f5;
   border-radius: 30px;
   border: solid 1px white;
+  background-image: url(https://i.pinimg.com/736x/85/9c/7c/859c7cf8043d590b0d0f1ae4f6642a82.jpg);
+  background-size: cover;
 }
 
 .div3 {
@@ -188,6 +196,9 @@ body {
   background-color: #f5f5f5;
   border-radius: 30px;
   border: solid .5px white;
+  background-image: url(https://i.pinimg.com/474x/6b/9e/50/6b9e507694695e7f16eb14c4bdfe8dba.jpg);
+  background-size: cover;
+  background-position: center;
 
 }
 
@@ -199,6 +210,9 @@ body {
   background-color: #f5f5f5;
   border-radius: 30px;
   border: solid .5px white;
+  background-image: url(https://i.pinimg.com/474x/c0/34/c2/c034c28e108a0b2486cc6dd20e9b6ddd.jpg);
+  background-position: center;
+  background-size: cover;
 
 
 }
@@ -211,6 +225,8 @@ body {
   background-color: #f5f5f5;
   border-radius: 30px;
   border: solid .5px white;
+  background-image: url(https://i.pinimg.com/474x/97/17/1b/97171bd3726ad80a25d7ce7d5028db87.jpg);
+  background-size: cover;
 
 
 }
@@ -245,6 +261,9 @@ body {
   background-color: #f5f5f5;
   border-radius: 30px;
   border: solid .5px white;
+  background-image: url(https://user-images.githubusercontent.com/7780269/57891608-3e096d00-7851-11e9-8e6c-6f58534ba3f5.png);
+  background-size: cover;
+  background-position: center;
 
 }
       
