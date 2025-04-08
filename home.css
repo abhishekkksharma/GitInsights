@@ -156,6 +156,7 @@ body {
   margin-right: 2%;
   height: 80%;
   padding: 30px;
+  margin-bottom: 400px;
 }
 .parent div {
   transition: transform 0.3s ease;
@@ -266,6 +267,118 @@ body {
   background-position: center;
 
 }
+/* Footer Bottom */
+
+.container-footer {
+  /* width: 100%; */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+}
+
+.newsletter {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.newsletter h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.newsletter p {
+  margin-bottom: 20px;
+}
+
+.email-form {
+  display: inline-flex;
+  border: 1px solid #333;
+}
+
+.email-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 300px;
+  font-size: 16px;
+}
+
+.email-form button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  margin-bottom: 40px;
+}
+
+.footer-section {
+  width: 30%;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+
+}
+
+.footer-section ul {
+  list-style-type: none;
+
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  margin-left: -40px;
+
+}
+
+.footer-section.bio p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 480px) {
+  .email-form input[type="email"] {
+    padding: 8px;
+    border: none;
+    outline: none;
+    width: 250px;
+    font-size: 16px;
+  }
+  .copyright {
+    text-align: center;
+    margin: -20px 0px -20px 0px;
+  }
+}
+
       
 /* Responsive Styles for Mobile */
 @media (max-width: 1200px) {

@@ -11,28 +11,52 @@
       <div class="navbar-container">
         <div class="navbar-items">
           <a href="#" class="navbar-item">
-            <img src="https://i.pinimg.com/474x/16/07/c1/1607c1caf8b3084b4a7b7a03aea7f872.jpg" alt="Home" class="navbar-icon">
+            <img
+              src="https://i.pinimg.com/474x/16/07/c1/1607c1caf8b3084b4a7b7a03aea7f872.jpg"
+              alt="Home"
+              class="navbar-icon"
+            />
             <span>Home</span>
           </a>
           <a href="#" class="navbar-item">
-            <img src="https://i.pinimg.com/474x/30/e2/13/30e213be64a823462db0dcf66d9ec0a9.jpg" alt="Notes" class="navbar-icon">
+            <img
+              src="https://i.pinimg.com/474x/30/e2/13/30e213be64a823462db0dcf66d9ec0a9.jpg"
+              alt="Notes"
+              class="navbar-icon"
+            />
             <span>Notes</span>
           </a>
           <a href="#" class="navbar-item">
-            <img src="https://i.pinimg.com/474x/65/ce/f3/65cef34884f3d3936e85ee51a907212b.jpg" alt="Commands" class="navbar-icon">
+            <img
+              src="https://i.pinimg.com/474x/65/ce/f3/65cef34884f3d3936e85ee51a907212b.jpg"
+              alt="Commands"
+              class="navbar-icon"
+            />
             <span>Commands</span>
           </a>
           <a href="#" class="navbar-item">
-            <img src="https://i.pinimg.com/474x/f9/5c/93/f95c93d32f7e1e324a9bd44976892cb5.jpg" alt="Dashboard" class="navbar-icon">
+            <img
+              src="https://i.pinimg.com/474x/f9/5c/93/f95c93d32f7e1e324a9bd44976892cb5.jpg"
+              alt="Dashboard"
+              class="navbar-icon"
+            />
             <span>Dashboard</span>
           </a>
           <a href="login.html" class="navbar-item">
-            <img src="https://i.pinimg.com/474x/3c/ae/07/3cae079ca0b9e55ec6bfc1b358c9b1e2.jpg" alt="Sign up" class="navbar-icon">
+            <img
+              src="https://i.pinimg.com/474x/3c/ae/07/3cae079ca0b9e55ec6bfc1b358c9b1e2.jpg"
+              alt="Sign up"
+              class="navbar-icon"
+            />
             <span>Sign up</span>
           </a>
           <!-- Theme Toggle Button -->
           <button id="theme-toggle" class="navbar-item theme-toggle-button">
-            <img src="https://i.pinimg.com/736x/44/60/ea/4460ea86bcd6973935f1f1c8fa1fc4da.jpg" alt="Theme Toggle" class="navbar-icon">
+            <img
+              src="https://i.pinimg.com/736x/44/60/ea/4460ea86bcd6973935f1f1c8fa1fc4da.jpg"
+              alt="Theme Toggle"
+              class="navbar-icon"
+            />
           </button>
         </div>
       </div>
@@ -40,35 +64,88 @@
 
     <div class="parent">
       <div class="div1">Learn Git and git hub easily.</div>
-      <div class="div2">2 </div>
-      <div class="div3">3 </div>
-      <div class="div4">4 </div>
-      <div class="div5">5 </div>
-      <div class="div6">6 </div>
-      <div class="div7">7 </div>
-      <div class="div8">8 </div>
-  </div>
-          
+      <div class="div2">2</div>
+      <div class="div3">3</div>
+      <div class="div4">4</div>
+      <div class="div5">5</div>
+      <div class="div6">6</div>
+      <div class="div7">7</div>
+      <div class="div8">8</div>
+    </div>
 
     <script>
       // JavaScript for Theme Toggle
-      const themeToggle = document.getElementById('theme-toggle');
+      const themeToggle = document.getElementById("theme-toggle");
       const body = document.body;
 
       // Check for saved theme in localStorage
-      const savedTheme = localStorage.getItem('theme');
+      const savedTheme = localStorage.getItem("theme");
       if (savedTheme) {
         body.classList.add(savedTheme);
       }
 
-      themeToggle.addEventListener('click', () => {
-        body.classList.toggle('light-theme');
-        if (body.classList.contains('light-theme')) {
-          localStorage.setItem('theme', 'light-theme');
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("light-theme");
+        if (body.classList.contains("light-theme")) {
+          localStorage.setItem("theme", "light-theme");
         } else {
-          localStorage.setItem('theme', '');
+          localStorage.setItem("theme", "");
         }
       });
     </script>
+
+ <!-------------------------------------- footer section     ---------------------------------------->
+    <div class="container-footer">
+      <section class="newsletter">
+        <h2>Explore Your Potential</h2>
+        <p>
+          Get the best out of your potential with us! Let us know how you feel.
+        </p>
+        <form class="email-form">
+          <input type="email" placeholder="Enter your email here*" required />
+          <button type="submit">Connect</button>
+        </form>
+      </section>
+
+      <footer>
+        <div class="footer-section about">
+          <h3>ABOUT</h3>
+          <ul>
+            <li><a href="#">Our Vission</a></li>
+            <li><a href="jobs.html">Notes</a></li>
+            <li><a href="#">services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section help">
+          <h3>HELP</h3>
+          <ul>
+            <li>
+              <a
+                href="mailto:abhisheksharma7340733@gmail.com,aman8560856@gmail.com?subject=Inquiry&body=Hello%20there,%20I'd%20like%20to%20ask..."
+                target="_blank"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:abhisheksharma7340733@gmail.com,aman8560856@gmail.com?subject=Inquiry&body=Hello%20there,%20I'd%20like%20to%20ask..."
+                target="_blank"
+                id="support"
+                >Email us at: support@xyz.co.in</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section bio">
+          <p>"Let us learn together and grow together"</p>
+        </div>
+      </footer>
+
+      <div class="copyright">
+        <p>© 2024</p>
+      </div>
+    </div>
   </body>
 </html>
