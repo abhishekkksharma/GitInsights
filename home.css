@@ -16,6 +16,13 @@ body.light-theme .navbar-item:hover {
   background: rgb(255, 255, 255); /* Darker hover effect */
 }
 
+body.light-theme .testimonials-section h1,
+body.light-theme .testimonials-section h3,
+body.light-theme .testimonials-section p {
+  color: black;
+}
+
+
 /* Toggle Button Styling */
 .theme-toggle-button {
   cursor: pointer;
@@ -54,7 +61,7 @@ html {
 body {
   margin: 0;
   height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: monospace;
   background-color: black;
   /* background: radial-gradient(
     circle at center,
@@ -351,6 +358,90 @@ body:not(.light-theme) .badge {
   font-weight: 400;
 }
 
+
+
+.testimonials-section {
+  text-align: center;
+    padding: 200px 0px;
+    margin-top: 0px;
+
+  }
+
+.testimonials-section h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: white;
+    font-family:monospace;;
+  }
+
+.sub-heading {
+    font-size: 1em;
+    color: white;
+    margin: 10px 0 30px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.testimonial-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+.testimonial-box:hover{
+  transform: translateY(-10px);
+
+}
+
+.testimonial-box img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    width: 100px;
+}
+
+.testimonial-box h2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    font-family: monospace;
+  }
+
+.testimonial-box .position {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.testimonial-box .quote {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.testimonial-box .social-icons {
+  margin: 8px 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.testimonial-box .social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-box .social-icons img:hover {
+  transform: scale(1.2);
+}
+
+
+
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 30px;
@@ -416,7 +507,6 @@ footer {
   justify-content: space-between;
   padding: 20px 0;
   border-top: 1px solid #ddd;
-  margin-bottom: 40px;
 }
 
 .footer-section {
