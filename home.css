@@ -16,8 +16,6 @@ body.light-theme .navbar-item:hover {
   background: rgb(255, 255, 255); /* Darker hover effect */
 }
 
-
-
 /* Toggle Button Styling */
 .theme-toggle-button {
   cursor: pointer;
@@ -48,6 +46,10 @@ body.light-theme .theme-toggle-button:hover {
 
 body.light-theme .theme-toggle-button .navbar-icon {
   filter: invert(1); /* Make icon black in light theme */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -85,7 +87,6 @@ body:not(.light-theme) .badge {
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
 }
-
 
 .navbar {
   background: rgba(255, 255, 255, 0.2);
@@ -182,7 +183,21 @@ body:not(.light-theme) .badge {
   grid-row: span 2 / span 2;
   grid-column-start: 1;
   grid-row-start: 6;
-  background-color: #2DAA9E;
+  background-image: url(https://i.pinimg.com/474x/a0/64/fd/a064fd84ebe1321ed8b9dd04f6dc12ba.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: monospace;
+  align-content: center;
+  text-align: center;
+  color: black;
+}
+.div3 p {
+  font-size: 18px;
+  margin-top: 0px;
+  color: #333;
 }
 
 .div4 {
@@ -194,19 +209,36 @@ body:not(.light-theme) .badge {
   background-size: contain;
 }
 
-
 .div6 {
   grid-row: span 3 / span 3;
   grid-column-start: 3;
   grid-row-start: 5;
-  background-color: #ADB2D4;
+  background-color: #adb2d4;
+  text-align: center;
+  align-content: center;
+  color: white;
+  font-family: monospace;
+  font-size: 18px;
+  /* padding: 2% 0px 2% 0px; */
+}
+.div6 p {
+  font-size: 40px;
+  font-family: monospace;
+  font-size: bold;
+  margin: 0px;
 }
 
 .div7 {
   grid-row: span 5 / span 5;
   grid-column-start: 4;
   grid-row-start: 3;
-  background-color: white;
+  background-image: url(https://i.pinimg.com/474x/be/c2/12/bec212bb31e0fcc06c68e6c92476b76d.jpg);
+  background-color: #3a943d;
+  color: white;
+  background-size: contain;
+  align-content: center;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .div8 {
@@ -214,9 +246,17 @@ body:not(.light-theme) .badge {
   grid-column-start: 5;
   grid-row-start: 2;
   background-color: white;
-  background-image: url(https://i.pinimg.com/474x/2b/64/b6/2b64b625d4e9b03a4b2f400d4af8e15e.jpg);
+  background-image: url(https://i.pinimg.com/474x/38/b0/a4/38b0a4602005472c1f8a743becd1cae9.jpg);
   background-size: cover;
   background-position: bottom;
+  font-family: monospace;
+  color: #a62c2c;
+  padding-top: 80%;
+  padding-left: 5%;
+  font-size: bold;
+}
+.div8 h1 {
+  font-family: monospace;
 }
 
 .div9 {
@@ -224,6 +264,26 @@ body:not(.light-theme) .badge {
   grid-column-start: 5;
   grid-row-start: 6;
   background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: monospace;
+  align-content: center;
+  text-align: center;
+  color: black;
+  background-image: url(https://i.pinimg.com/474x/52/ce/9e/52ce9e5860793df44c340f3011700cde.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.div9 p {
+  /* font-size: 30px; */
+  margin-top: 0px;
+  color: #333;
+  margin: 0px 0px;
+}
+.div9 h2 {
+  margin: 0px;
 }
 
 .hero {
@@ -270,7 +330,6 @@ body:not(.light-theme) .badge {
     font-size: 16px;
   }
 }
-
 
 /* Footer Bottom */
 
@@ -425,18 +484,17 @@ footer {
   .navbar-items :hover {
     padding: 0px;
   }
-  .parent{
+  .parent {
     max-height: 20%;
     margin-top: -10px;
     gap: 8px;
     margin-left: 8px;
     margin-right: 8px;
-
   }
-  .parent div{
+  .parent div {
     border-radius: 8px;
   }
-  .hero{
+  .hero {
     margin: 5%;
     padding-bottom: 0px;
     margin-top: 0px;
@@ -444,13 +502,12 @@ footer {
   .hero h1 {
     font-size: 18px;
   }
-  .badge{
+  .badge {
     font-size: 8px;
     margin-bottom: 5px;
   }
-  .hero p{
+  .hero p {
     font-size: 10px;
     margin-bottom: 0px;
   }
-
 }
