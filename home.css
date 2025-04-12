@@ -605,43 +605,62 @@ footer {
     padding: 0px;
   }
   .parent {
-    max-height: 20%;
+    max-height: 30%;
     margin-top: -10px;
     gap: 8px;
     margin-left: 8px;
     margin-right: 8px;
     margin-bottom: 0px;
+    /* padding-left: 4%; */
+    padding-right: 4%;
   }
   .parent div {
+    width: 110%;
     border-radius: 8px;
-    font-size: 8px;
+    font-size: 10px;
     padding-left: 5px;
     padding-right: 5px;
-    padding-top: 5%;
+    padding-top: 8%;
+    align-content: center;
+    font-weight: bold;
     /* padding-top: 10%; */
   }
   .parent div p{
-    font-size: 6px;
+    font-size: 8px;
   }
-
+  .parent .div4 {
+    margin-left: 20px;
+  }
+  .parent .div4 h1{
+    /* font-size: 10px ; */
+    font-weight: bold;
+  }
+  .parent .div7{
+    margin-left: -32px;
+    width: 130%;
+  }
   .parent h1 {
     font-size: 8px;
   } 
+  .div6{
+    display:none;
+  }
   .hero {
     margin: 5%;
+    margin-bottom: 0px;
     padding-bottom: 0px;
     margin-top: 0px;
     padding-top: 80px;
   }
   .hero h1 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .badge {
-    font-size: 8px;
+    font-size: 10px;
     margin-bottom: 5px;
   }
   .hero p {
-    font-size: 10px;
+    font-size: 12px;
     margin-bottom: 0px;
   }
   .testimonials-section{
@@ -671,3 +690,7 @@ footer {
 }
 
 }
+
+
+
+
