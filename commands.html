@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Git Commands - GitInsights</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f6fc;
+      color: #222;
+    }
+
+    .navbar {
+      background-color: #2e3a59;
+      padding: 10px 20px;
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar-items {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .navbar-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: transform 0.2s;
+    }
+
+    .navbar-item:hover {
+      transform: scale(1.1);
+      color: #00d1b2;
+    }
+
+    .navbar-icon {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+
+    .commands-section {
+      padding: 50px 20px;
+    }
+
+    .commands-container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .commands-container h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #2e3a59;
+    }
+
+    .command-card {
+      background-color: #fff;
+      padding: 20px 30px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
+
+    .command-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .command-card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #1f2d40;
+    }
+
+    .command-card p {
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .command-card code {
+      background-color: #eff1f5;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-family: 'Courier New', Courier, monospace;
+      display: block;
+      margin-top: 5px;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: #2e3a59;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-items">
+        <a href="index.html" class="navbar-item">
+          <img src="images/home.png" class="navbar-icon" alt="Home" />
+          Home
+        </a>
+        <a href="about.html" class="navbar-item">
+          <img src="images/about.png" class="navbar-icon" alt="About" />
+          About
+        </a>
+        <a href="commands.html" class="navbar-item">
+          <img src="images/terminal.png" class="navbar-icon" alt="Commands" />
+          Commands
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Command Section -->
+  <section class="commands-section">
+    <div class="commands-container">
+      <h1>Essential Git Commands</h1>
+
+      <div class="command-card">
+        <h2>1. git init</h2>
+        <p>Used to initialize a new Git repository in your current directory. It creates a hidden `.git` folder where all the metadata is stored.</p>
+        <code>git init</code>
+      </div>
+
+      <div class="command-card">
+        <h2>2. git clone</h2>
+        <p>Creates a local copy of a remote repository. Perfect for contributing to existing projects.</p>
+        <code>git clone &lt;repository-url&gt;</code>
+      </div>
+
+      <div class="command-card">
+        <h2>3. git status</h2>
+        <p>Shows the status of changes as untracked, modified, or staged. Helps you know what’s going on.</p>
+        <code>git status</code>
+      </div>
+
+      <div class="command-card">
+        <h2>4. git add</h2>
+        <p>Adds files to the staging area before committing. You can add individual files or all changes.</p>
+        <code>git add &lt;filename&gt;</code><br>
+        <code>git add .</code> (adds everything)
+      </div>
+
+      <div class="command-card">
+        <h2>5. git commit</h2>
+        <p>Creates a snapshot of the staged changes with a message. It’s like saving your project.</p>
+        <code>git commit -m "your message"</code>
+      </div>
+
+      <div class="command-card">
+        <h2>6. git push</h2>
+        <p>Sends your commits from your local repo to a remote one like GitHub.</p>
+        <code>git push origin main</code>
+      </div>
+
+      <div class="command-card">
+        <h2>7. git pull</h2>
+        <p>Fetches and integrates changes from a remote repo into your current branch.</p>
+        <code>git pull</code>
+      </div>
+
+      <div class="command-card">
+        <h2>8. git branch</h2>
+        <p>Lists all branches or creates a new one. Great for working on different features independently.</p>
+        <code>git branch</code><br>
+        <code>git branch &lt;branch-name&gt;</code>
+      </div>
+
+      <div class="command-card">
+        <h2>9. git checkout</h2>
+        <p>Switches between branches or restores working directory files. Useful for navigating versions.</p>
+        <code>git checkout &lt;branch-name&gt;</code>
+      </div>
+
+      <div class="command-card">
+        <h2>10. git merge</h2>
+        <p>Merges the changes from another branch into your current branch. Commonly used in feature integrations.</p>
+        <code>git merge &lt;branch-name&gt;</code>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GitInsights. All rights reserved.</p>
+    <p>Crafted with ❤️ for learners and developers</p>
+  </footer>
+
+</body>
+</html>

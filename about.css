@@ -1,0 +1,352 @@
+body.light-theme {
+  background-color: rgb(212, 204, 204);
+}
+
+body.light-theme .navbar {
+  background: rgba(255, 255, 255, 0.267); /* Darker background for contrast */
+  border: 1px solid rgba(0, 0, 0, 0.3); /* Darker border */
+}
+
+body.light-theme .navbar-item {
+  color: rgb(0, 0, 0); /* Black text for light theme */
+}
+
+body.light-theme .navbar-item:hover {
+  background: rgb(255, 255, 255); /* Darker hover effect */
+}
+
+body.light-theme .testimonials-section h1,
+body.light-theme .testimonials-section h3,
+body.light-theme .testimonials-section p {
+  color: black;
+}
+
+/* Toggle Button Styling */
+.theme-toggle-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 34px; /* Fixed width for circle */
+  height: 34px; /* Fixed height for circle */
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+body.light-theme .theme-toggle-button:hover {
+  background: rgb(255, 255, 255); /* Darker hover effect */
+}
+
+.theme-toggle-button .navbar-icon {
+  width: 35px; /* Adjust icon size */
+  height: 35px;
+  filter: invert(0); /* Make icon white in dark theme */
+}
+
+body.light-theme .theme-toggle-button .navbar-icon {
+  filter: invert(1); /* Make icon black in light theme */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  background-color: black;
+}
+/* Dark Theme: Hero Section */
+body:not(.light-theme) .hero h1,
+body:not(.light-theme) .hero p {
+  color: white;
+}
+
+body:not(.light-theme) .badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 5px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 12px;
+  left: 10%;
+  right: 10%;
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Lighter border for better contrast */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-icon {
+  width: 35px; /* You can adjust the size */
+  height: 35px;
+  border-radius: 18px;
+}
+.navbar-item span {
+  margin-left: 8px;
+}
+
+.navbar-item {
+  color: rgb(
+    255,
+    255,
+    255
+  ); /* White text for better contrast on dark background */
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.about-button{
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-item:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Hide menu toggle button */
+.menu-toggle {
+  display: none;
+}
+
+
+/* About Section */
+.about-section {
+  padding: 60px 20px;
+  max-width: 100%;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.about-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2e3a59;
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #1f2d40;
+}
+
+.about-container p {
+  font-size: 1rem;
+  margin: 15px 0;
+}
+
+.about-container ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.about-container ul li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.about-container ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00c48c;
+}
+
+.about-team ul li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.about-team ul li::before {
+  content: "👨‍💻";
+  position: absolute;
+  left: 0;
+}
+
+
+/* Footer Bottom */
+
+.container-footer {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  margin-top: 200px;
+}
+
+.newsletter {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.newsletter h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.newsletter p {
+  margin-bottom: 20px;
+}
+
+.email-form {
+  display: inline-flex;
+  border: 1px solid #333;
+}
+
+.email-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 300px;
+  font-size: 16px;
+}
+
+.email-form button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+
+.footer-section {
+  width: 30%;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  margin-left: -40px;
+}
+
+.footer-section.bio p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    left: 10%;
+    right: 10%;
+    height: 40px;
+    align-self: center;
+  }
+
+  .navbar-item span {
+    display: none; /* Hide text labels on small screens */
+  }
+
+  .navbar-items {
+    justify-content: space-between;
+    padding: 0px;
+  }
+
+  .navbar-item {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    left: 5%;
+    right: 5%;
+    height: 35px;
+    align-self: center;
+  }
+  .navbar-items :hover {
+    padding: 0px;
+  }
+  .cards {
+    margin-top: 100px;
+  }
+  .container-footer {
+    margin-top: 100px;
+  }
+
+  .email-form input[type="email"] {
+    padding: 8px;
+    border: none;
+    outline: none;
+    width: 200px;
+    font-size: 16px;
+  }
+  .copyright {
+    text-align: center;
+    margin: -20px 0px -20px 0px;
+  }
+}

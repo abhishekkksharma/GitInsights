@@ -1,0 +1,180 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitInsights</title>
+    <link rel="icon" href="images\logo.png" type="image/png" />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-items">
+          <a href="index.html" class="navbar-item">
+            <img
+              src="https://i.pinimg.com/474x/7a/4e/06/7a4e0680f640a082ff37ab91f86bae1f.jpg"
+              alt="Home"
+              class="navbar-icon"
+            />
+            <span>Home</span>
+          </a>
+          <a href="notes.html" class="navbar-item note-button">
+            <img
+              src="https://i.pinimg.com/474x/30/e2/13/30e213be64a823462db0dcf66d9ec0a9.jpg"
+              alt="Notes"
+              class="navbar-icon"
+            />
+            <span>Notes</span>
+          </a>
+          <a href="#" class="navbar-item">
+            <img
+              src="https://i.pinimg.com/474x/65/ce/f3/65cef34884f3d3936e85ee51a907212b.jpg"
+              alt="Commands"
+              class="navbar-icon"
+            />
+            <span>Commands</span>
+          </a>
+          <a href="about.html" class="navbar-item about-button">
+            <img
+              src="https://i.pinimg.com/474x/ae/3d/15/ae3d150a02f8e238a585eb3b82d9f47a.jpg"
+              alt="About"
+              class="navbar-icon"
+            />
+            <span>About</span>
+          </a>
+          <a href="login.html" class="navbar-item">
+            <img
+              src="https://i.pinimg.com/474x/3c/ae/07/3cae079ca0b9e55ec6bfc1b358c9b1e2.jpg"
+              alt="Sign up"
+              class="navbar-icon"
+            />
+            <span>Sign up</span>
+          </a>
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle" class="navbar-item theme-toggle-button">
+            <img
+              src="https://i.pinimg.com/736x/44/60/ea/4460ea86bcd6973935f1f1c8fa1fc4da.jpg"
+              alt="Theme Toggle"
+              class="navbar-icon"
+            />
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="about-section">
+      <div class="about-container">
+        <h1>About GitInsights</h1>
+        <p>
+          GitInsights is a student-led project built to help learners and
+          developers master version control using Git and GitHub. Our platform
+          offers hands-on tutorials, essential command references, notes, and a
+          structured roadmap to make learning Git both easy and effective.
+        </p>
+
+        <h2>Our Mission</h2>
+        <p>
+          To simplify the learning curve of Git & GitHub by creating an
+          all-in-one platform that bridges the gap between theory and real-world
+          collaboration.
+        </p>
+
+        <h2>What Makes Us Unique?</h2>
+        <ul>
+          <li>🚀 Curated content focused on practical workflows.</li>
+          <li>🧭 Interactive roadmap to guide your learning path.</li>
+          <li>💡 Direct links to powerful GitHub tools and generators.</li>
+          <li>🌐 Community-driven and student-created with passion.</li>
+        </ul>
+
+        <h2>Meet the Team</h2>
+        <div class="about-team">
+          <p>
+            Developed by a team of Computer Science Engineering students
+            passionate about open-source and collaborative coding:
+          </p>
+          <ul>
+            <li><strong>Aman Singh</strong> – UI/UX and Logic</li>
+            <li><strong>Abhishek</strong> – Structure and Integration</li>
+            <li><strong>Addy</strong> – Design and Content</li>
+            <li><strong>Mridul</strong> – Features and Optimization</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script>
+        // JavaScript for Theme Toggle
+        const themeToggle = document.getElementById("theme-toggle");
+        const body = document.body;
+  
+        // Check for saved theme in localStorage
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          body.classList.add(savedTheme);
+        }
+  
+        themeToggle.addEventListener("click", () => {
+          body.classList.toggle("light-theme");
+          if (body.classList.contains("light-theme")) {
+            localStorage.setItem("theme", "light-theme");
+          } else {
+            localStorage.setItem("theme", "");
+          }
+        });
+      </script>
+  
+    <!-------------------------------------- footer section     ---------------------------------------->
+    <div class="container-footer">
+      <section class="newsletter">
+        <h2>Explore Your Potential</h2>
+        <p>
+          Get the best out of your potential with us! Let us know how you feel.
+        </p>
+        <form class="email-form">
+          <input type="email" placeholder="Enter your email here*" required />
+          <button type="submit">Connect</button>
+        </form>
+      </section>
+
+      <footer>
+        <div class="footer-section about">
+          <h3>Quick links</h3>
+          <ul>
+            <li><a href="#">Notes</a></li>
+            <li><a href="jobs.html">Commands</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section help">
+          <h3>HELP</h3>
+          <ul>
+            <li>
+              <a
+                href="mailto:abhisheksharma7340733@gmail.com,aman8560856@gmail.com?subject=Inquiry&body=Hello%20there,%20I'd%20like%20to%20ask..."
+                target="_blank"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:abhisheksharma7340733@gmail.com,aman8560856@gmail.com?subject=Inquiry&body=Hello%20there,%20I'd%20like%20to%20ask..."
+                target="_blank"
+                id="support"
+                >Email us at: Support@GitInsights.co.in</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section bio">
+          <p>"Let us learn together and grow together"</p>
+        </div>
+      </footer>
+
+      <div class="copyright">
+        <p>©GitInsights 2025</p>
+      </div>
+    </div>
+  </body>
+</html>
