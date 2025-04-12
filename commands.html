@@ -1,218 +1,232 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Git Commands - GitInsights</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f3f6fc;
-      color: #222;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitInsights</title>
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="ciucciuhd.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-items">
+          <a href="index.html" class="navbar-item">
+            <img src="https://i.pinimg.com/474x/7a/4e/06/7a4e0680f640a082ff37ab91f86bae1f.jpg" alt="Home" class="navbar-icon" />
+            <span>Home</span>
+          </a>
+          <a href="notes.html" class="navbar-item note-button">
+            <img src="https://i.pinimg.com/474x/30/e2/13/30e213be64a823462db0dcf66d9ec0a9.jpg" alt="Notes" class="navbar-icon" />
+            <span>Notes</span>
+          </a>
+          <a href="#" class="navbar-item command-button">
+            <img src="https://i.pinimg.com/474x/65/ce/f3/65cef34884f3d3936e85ee51a907212b.jpg" alt="Commands" class="navbar-icon" />
+            <span>Commands</span>
+          </a>
+          <a href="about.html" class="navbar-item">
+            <img src="https://i.pinimg.com/474x/ae/3d/15/ae3d150a02f8e238a585eb3b82d9f47a.jpg" alt="About" class="navbar-icon" />
+            <span>About</span>
+          </a>
+          <a href="login.html" class="navbar-item">
+            <img src="https://i.pinimg.com/474x/3c/ae/07/3cae079ca0b9e55ec6bfc1b358c9b1e2.jpg" alt="Sign up" class="navbar-icon" />
+            <span>Sign up</span>
+          </a>
+          <button id="theme-toggle" class="navbar-item theme-toggle-button">
+            <img src="https://i.pinimg.com/736x/44/60/ea/4460ea86bcd6973935f1f1c8fa1fc4da.jpg" alt="Theme Toggle" class="navbar-icon" />
+          </button>
+        </div>
+      </div>
+    </nav>
 
-    .navbar {
-      background-color: #2e3a59;
-      padding: 10px 20px;
-    }
+    <!-- Command Section -->
+    <section class="commands-section">
+      <div class="commands-container">
+        <h1>Essential Git Commands</h1>
 
-    .navbar-container {
-      display: flex;
-      justify-content: center;
-    }
+        <div class="command-card">
+          <h2>1. git init</h2>
+          <p>Used to initialize a new Git repository in your current directory. It creates a hidden `.git` folder where all the metadata is stored.</p>
+          <div class="code-block">
+            <code>git init</code>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
 
-    .navbar-items {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
+        <div class="command-card">
+          <h2>2. git clone</h2>
+          <p>Creates a local copy of a remote repository. Perfect for contributing to existing projects.</p>
+          <div class="code-block">
+            <code>git clone &lt;repository-url&gt;</code>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
 
-    .navbar-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      font-size: 0.9rem;
-      transition: transform 0.2s;
-    }
+        <div class="command-card">
+          <h2>3. git status</h2>
+          <p>Shows the status of changes as untracked, modified, or staged. Helps you know what’s going on.</p>
+          <div class="code-block">
+            <code>git status</code>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
 
-    .navbar-item:hover {
-      transform: scale(1.1);
-      color: #00d1b2;
-    }
+        <div class="command-card">
+          <h2>4. git add</h2>
+          <p>Adds files to the staging area before committing. You can add individual files or all changes.</p>
+          <div class="code-block">
+            <code>git add &lt;filename&gt;</code>
+            <button class="copy-btn">Copy</button>
+          </div>
+          <div class="code-block">
+            <code>git add .</code>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
 
-    .navbar-icon {
-      width: 30px;
-      height: 30px;
-      margin-bottom: 5px;
-      border-radius: 5px;
-    }
+        <div class="command-card">
+          <h2>5. git commit</h2>
+          <p>Creates a snapshot of the staged changes with a message. It’s like saving your project.</p>
+          <div class="code-block">
+            <code>git commit -m "your message"</code>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
 
-    .commands-section {
-      padding: 50px 20px;
-    }
+        <div class="command-card">
+          <h2>6. git push</h2>
+          <p>Sends your commits from your local repo to a remote one like GitHub.</p>
+          <div class="code-block">
+            <code>git push origin main</code>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
 
-    .commands-container {
-      max-width: 1000px;
-      margin: auto;
-    }
+        <div class="command-card">
+          <h2>7. git pull</h2>
+          <p>Fetches and integrates changes from a remote repo into your current branch.</p>
+          <div class="code-block">
+            <code>git pull</code>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
 
-    .commands-container h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      color: #2e3a59;
-    }
+        <div class="command-card">
+          <h2>8. git branch</h2>
+          <p>Lists all branches or creates a new one. Great for working on different features independently.</p>
+          <div class="code-block">
+            <code>git branch</code>
+            <button class="copy-btn">Copy</button>
+          </div>
+          <div class="code-block">
+            <code>git branch &lt;branch-name&gt;</code>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
 
-    .command-card {
-      background-color: #fff;
-      padding: 20px 30px;
-      margin-bottom: 20px;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-      transition: 0.3s;
-    }
+        <div class="command-card">
+          <h2>9. git checkout</h2>
+          <p>Switches between branches or restores working directory files. Useful for navigating versions.</p>
+          <div class="code-block">
+            <code>git checkout &lt;branch-name&gt;</code>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
 
-    .command-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
+        <div class="command-card">
+          <h2>10. git merge</h2>
+          <p>Merges the changes from another branch into your current branch. Commonly used in feature integrations.</p>
+          <div class="code-block">
+            <code>git merge &lt;branch-name&gt;</code>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    .command-card h2 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: #1f2d40;
-    }
+    <!-- Theme Toggle Script -->
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const body = document.body;
 
-    .command-card p {
-      margin-bottom: 8px;
-      font-size: 1rem;
-    }
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        body.classList.add(savedTheme);
+      }
 
-    .command-card code {
-      background-color: #eff1f5;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-family: 'Courier New', Courier, monospace;
-      display: block;
-      margin-top: 5px;
-      font-size: 0.95rem;
-    }
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("light-theme");
+        if (body.classList.contains("light-theme")) {
+          localStorage.setItem("theme", "light-theme");
+        } else {
+          localStorage.setItem("theme", "");
+        }
+      });
+    </script>
 
-    footer {
-      background-color: #2e3a59;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 50px;
-    }
+    <!-- Copy to Clipboard Script -->
+    <script>
+      const copyButtons = document.querySelectorAll(".copy-btn");
 
-    footer p {
-      margin: 5px 0;
-    }
-  </style>
-</head>
-<body>
+      copyButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const code = btn.previousElementSibling.innerText;
+          navigator.clipboard.writeText(code).then(() => {
+            btn.innerText = "Copied!";
+            setTimeout(() => {
+              btn.innerText = "Copy";
+            }, 1500);
+          });
+        });
+      });
+    </script>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="navbar-items">
-        <a href="index.html" class="navbar-item">
-          <img src="images/home.png" class="navbar-icon" alt="Home" />
-          Home
-        </a>
-        <a href="about.html" class="navbar-item">
-          <img src="images/about.png" class="navbar-icon" alt="About" />
-          About
-        </a>
-        <a href="commands.html" class="navbar-item">
-          <img src="images/terminal.png" class="navbar-icon" alt="Commands" />
-          Commands
-        </a>
+    <!-- Footer Section -->
+    <div class="container-footer">
+      <section class="newsletter">
+        <h2>Explore Your Potential</h2>
+        <p>Get the best out of your potential with us! Let us know how you feel.</p>
+        <form class="email-form">
+          <input type="email" placeholder="Enter your email here*" required />
+          <button type="submit">Connect</button>
+        </form>
+      </section>
+
+      <footer>
+        <div class="footer-section about">
+          <h3>Quick links</h3>
+          <ul>
+            <li><a href="#">Notes</a></li>
+            <li><a href="jobs.html">Commands</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section help">
+          <h3>HELP</h3>
+          <ul>
+            <li>
+              <a
+                href="mailto:abhisheksharma7340733@gmail.com,aman8560856@gmail.com?subject=Inquiry&body=Hello%20there,%20I'd%20like%20to%20ask..."
+                target="_blank"
+              >Contact</a>
+            </li>
+            <li>
+              <a
+                href="mailto:abhisheksharma7340733@gmail.com,aman8560856@gmail.com?subject=Inquiry&body=Hello%20there,%20I'd%20like%20to%20ask..."
+                target="_blank"
+                id="support"
+              >Email us at: Support@GitInsights.co.in</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section bio">
+          <p>"Let us learn together and grow together"</p>
+        </div>
+      </footer>
+
+      <div class="copyright">
+        <p>©GitInsights 2025</p>
       </div>
     </div>
-  </nav>
-
-  <!-- Command Section -->
-  <section class="commands-section">
-    <div class="commands-container">
-      <h1>Essential Git Commands</h1>
-
-      <div class="command-card">
-        <h2>1. git init</h2>
-        <p>Used to initialize a new Git repository in your current directory. It creates a hidden `.git` folder where all the metadata is stored.</p>
-        <code>git init</code>
-      </div>
-
-      <div class="command-card">
-        <h2>2. git clone</h2>
-        <p>Creates a local copy of a remote repository. Perfect for contributing to existing projects.</p>
-        <code>git clone &lt;repository-url&gt;</code>
-      </div>
-
-      <div class="command-card">
-        <h2>3. git status</h2>
-        <p>Shows the status of changes as untracked, modified, or staged. Helps you know what’s going on.</p>
-        <code>git status</code>
-      </div>
-
-      <div class="command-card">
-        <h2>4. git add</h2>
-        <p>Adds files to the staging area before committing. You can add individual files or all changes.</p>
-        <code>git add &lt;filename&gt;</code><br>
-        <code>git add .</code> (adds everything)
-      </div>
-
-      <div class="command-card">
-        <h2>5. git commit</h2>
-        <p>Creates a snapshot of the staged changes with a message. It’s like saving your project.</p>
-        <code>git commit -m "your message"</code>
-      </div>
-
-      <div class="command-card">
-        <h2>6. git push</h2>
-        <p>Sends your commits from your local repo to a remote one like GitHub.</p>
-        <code>git push origin main</code>
-      </div>
-
-      <div class="command-card">
-        <h2>7. git pull</h2>
-        <p>Fetches and integrates changes from a remote repo into your current branch.</p>
-        <code>git pull</code>
-      </div>
-
-      <div class="command-card">
-        <h2>8. git branch</h2>
-        <p>Lists all branches or creates a new one. Great for working on different features independently.</p>
-        <code>git branch</code><br>
-        <code>git branch &lt;branch-name&gt;</code>
-      </div>
-
-      <div class="command-card">
-        <h2>9. git checkout</h2>
-        <p>Switches between branches or restores working directory files. Useful for navigating versions.</p>
-        <code>git checkout &lt;branch-name&gt;</code>
-      </div>
-
-      <div class="command-card">
-        <h2>10. git merge</h2>
-        <p>Merges the changes from another branch into your current branch. Commonly used in feature integrations.</p>
-        <code>git merge &lt;branch-name&gt;</code>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 GitInsights. All rights reserved.</p>
-    <p>Crafted with ❤️ for learners and developers</p>
-  </footer>
-
-</body>
+  </body>
 </html>
