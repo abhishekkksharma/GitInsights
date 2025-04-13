@@ -172,12 +172,23 @@ body:not(.light-theme) .badge {
 }
 .parent div {
   border-radius: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+
 }
 .parent div:hover {
   border: 2px solid white;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
   transition: box-shadow 0.3s ease, border 0.3s ease;
+  cursor:pointer;
 }
+
+.parent > div.slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .div1 {
   grid-row: span 4 / span 4;
   grid-row-start: 2;

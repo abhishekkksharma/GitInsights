@@ -234,6 +234,77 @@ body.light-theme {
     color: #f17300;
     font-weight: bold;
   }
+
+.video-section {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+.video-wrapper {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-box {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+}
+
+.video-box iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.summary-box {
+  width: 40%;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin-top: 0; /* Ensure no extra margin on top of the summary */
+}
+
+.summary-box h2 {
+  margin-top: 0;
+}
+
+.summary-box p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .video-section {
+    flex-direction: column; /* Stack the video and summary vertically on small screens */
+    gap: 20px;
+    padding: 20px; /* Adjust padding for mobile to prevent too much space around */
+  }
+
+  .video-wrapper, .summary-box {
+    width: 100%; /* Full width for both video and summary */
+    margin: 0; /* Remove any margin that might push elements further away */
+  }
+
+  .summary-box {
+    width: 90%;
+    max-height: 400px; /* Remove max-height so the summary can grow vertically */
+    overflow-y:scroll; /* Allow the summary to grow vertically without scrolling */
+    margin-top: 20px; /* Add some space between the video and summary */
+  }
+}
+  
   
   /* Footer Bottom */
   

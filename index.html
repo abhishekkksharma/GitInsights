@@ -76,7 +76,7 @@
     </section>
 
     <div class="parent">
-      <div class="div1">Git Commands &lt;/&gt;</div>
+      <div class="div1" onclick="window.location.href='commands.html'">Git Commands &lt;/&gt;</div>
       <div class="div3">
         What is SCM?
         <p>Know more</p>
@@ -265,6 +265,16 @@
         } else {
           localStorage.setItem("theme", "");
         }
+      });
+
+      // slide up animation////
+      window.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll(".parent > div");
+        elements.forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add("slide-up");
+          }, index * 150); // staggered delay
+        });
       });
     </script>
 
