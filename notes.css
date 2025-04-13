@@ -266,7 +266,7 @@ body.light-theme {
 
 .summary-box {
   width: 40%;
-  max-height: 400px;
+  max-height: 448px;
   overflow-y: auto;
   background: #f4f4f4;
   padding: 20px;

@@ -11,40 +11,76 @@
       <div class="navbar-container">
         <div class="navbar-items">
           <a href="index.html" class="navbar-item">
-            <img src="https://i.pinimg.com/474x/7a/4e/06/7a4e0680f640a082ff37ab91f86bae1f.jpg" alt="Home" class="navbar-icon" />
+            <img
+              src="https://i.pinimg.com/474x/7a/4e/06/7a4e0680f640a082ff37ab91f86bae1f.jpg"
+              alt="Home"
+              class="navbar-icon"
+            />
             <span>Home</span>
           </a>
           <a href="notes.html" class="navbar-item note-button">
-            <img src="https://i.pinimg.com/474x/30/e2/13/30e213be64a823462db0dcf66d9ec0a9.jpg" alt="Notes" class="navbar-icon" />
+            <img
+              src="https://i.pinimg.com/474x/30/e2/13/30e213be64a823462db0dcf66d9ec0a9.jpg"
+              alt="Notes"
+              class="navbar-icon"
+            />
             <span>Notes</span>
           </a>
           <a href="#" class="navbar-item command-button">
-            <img src="https://i.pinimg.com/474x/65/ce/f3/65cef34884f3d3936e85ee51a907212b.jpg" alt="Commands" class="navbar-icon" />
+            <img
+              src="https://i.pinimg.com/474x/65/ce/f3/65cef34884f3d3936e85ee51a907212b.jpg"
+              alt="Commands"
+              class="navbar-icon"
+            />
             <span>Commands</span>
           </a>
           <a href="about.html" class="navbar-item">
-            <img src="https://i.pinimg.com/474x/ae/3d/15/ae3d150a02f8e238a585eb3b82d9f47a.jpg" alt="About" class="navbar-icon" />
+            <img
+              src="https://i.pinimg.com/474x/ae/3d/15/ae3d150a02f8e238a585eb3b82d9f47a.jpg"
+              alt="About"
+              class="navbar-icon"
+            />
             <span>About</span>
           </a>
           <a href="login.html" class="navbar-item">
-            <img src="https://i.pinimg.com/474x/3c/ae/07/3cae079ca0b9e55ec6bfc1b358c9b1e2.jpg" alt="Sign up" class="navbar-icon" />
+            <img
+              src="https://i.pinimg.com/474x/3c/ae/07/3cae079ca0b9e55ec6bfc1b358c9b1e2.jpg"
+              alt="Sign up"
+              class="navbar-icon"
+            />
             <span>Sign up</span>
           </a>
           <button id="theme-toggle" class="navbar-item theme-toggle-button">
-            <img src="https://i.pinimg.com/736x/44/60/ea/4460ea86bcd6973935f1f1c8fa1fc4da.jpg" alt="Theme Toggle" class="navbar-icon" />
+            <img
+              src="https://i.pinimg.com/736x/44/60/ea/4460ea86bcd6973935f1f1c8fa1fc4da.jpg"
+              alt="Theme Toggle"
+              class="navbar-icon"
+            />
           </button>
         </div>
       </div>
     </nav>
 
-    <!-- Command Section -->
-    <section class="commands-section">
-      <div class="commands-container">
-        <h1>Essential Git Commands</h1>
+    <!-- SEARCH BAR -->
+    <div class="search-container">
+      <input
+        type="text"
+        id="commandSearch"
+        placeholder="Search Git command..."
+      />
+    </div>
 
+    <!-- COMMAND SECTION -->
+    <section class="commands-section">
+      <div class="commands-container" id="commandList">
+        <h1>Essential Git Commands</h1>
+        
         <div class="command-card">
           <h2>1. git init</h2>
-          <p>Used to initialize a new Git repository in your current directory. It creates a hidden `.git` folder where all the metadata is stored.</p>
+          <p>
+            Used to initialize a new Git repository in your current directory.
+            It creates a hidden `.git` folder where all the metadata is stored.
+          </p>
           <div class="code-block">
             <code>git init</code>
             <button class="copy-btn">Copy</button>
@@ -53,7 +89,10 @@
 
         <div class="command-card">
           <h2>2. git clone</h2>
-          <p>Creates a local copy of a remote repository. Perfect for contributing to existing projects.</p>
+          <p>
+            Creates a local copy of a remote repository. Perfect for
+            contributing to existing projects.
+          </p>
           <div class="code-block">
             <code>git clone &lt;repository-url&gt;</code>
             <button class="copy-btn">Copy</button>
@@ -62,7 +101,10 @@
 
         <div class="command-card">
           <h2>3. git status</h2>
-          <p>Shows the status of changes as untracked, modified, or staged. Helps you know what’s going on.</p>
+          <p>
+            Shows the status of changes as untracked, modified, or staged. Helps
+            you know what’s going on.
+          </p>
           <div class="code-block">
             <code>git status</code>
             <button class="copy-btn">Copy</button>
@@ -71,7 +113,10 @@
 
         <div class="command-card">
           <h2>4. git add</h2>
-          <p>Adds files to the staging area before committing. You can add individual files or all changes.</p>
+          <p>
+            Adds files to the staging area before committing. You can add
+            individual files or all changes.
+          </p>
           <div class="code-block">
             <code>git add &lt;filename&gt;</code>
             <button class="copy-btn">Copy</button>
@@ -84,7 +129,10 @@
 
         <div class="command-card">
           <h2>5. git commit</h2>
-          <p>Creates a snapshot of the staged changes with a message. It’s like saving your project.</p>
+          <p>
+            Creates a snapshot of the staged changes with a message. It’s like
+            saving your project.
+          </p>
           <div class="code-block">
             <code>git commit -m "your message"</code>
             <button class="copy-btn">Copy</button>
@@ -93,7 +141,9 @@
 
         <div class="command-card">
           <h2>6. git push</h2>
-          <p>Sends your commits from your local repo to a remote one like GitHub.</p>
+          <p>
+            Sends your commits from your local repo to a remote one like GitHub.
+          </p>
           <div class="code-block">
             <code>git push origin main</code>
             <button class="copy-btn">Copy</button>
@@ -102,7 +152,10 @@
 
         <div class="command-card">
           <h2>7. git pull</h2>
-          <p>Fetches and integrates changes from a remote repo into your current branch.</p>
+          <p>
+            Fetches and integrates changes from a remote repo into your current
+            branch.
+          </p>
           <div class="code-block">
             <code>git pull</code>
             <button class="copy-btn">Copy</button>
@@ -111,7 +164,10 @@
 
         <div class="command-card">
           <h2>8. git branch</h2>
-          <p>Lists all branches or creates a new one. Great for working on different features independently.</p>
+          <p>
+            Lists all branches or creates a new one. Great for working on
+            different features independently.
+          </p>
           <div class="code-block">
             <code>git branch</code>
             <button class="copy-btn">Copy</button>
@@ -124,7 +180,10 @@
 
         <div class="command-card">
           <h2>9. git checkout</h2>
-          <p>Switches between branches or restores working directory files. Useful for navigating versions.</p>
+          <p>
+            Switches between branches or restores working directory files.
+            Useful for navigating versions.
+          </p>
           <div class="code-block">
             <code>git checkout &lt;branch-name&gt;</code>
             <button class="copy-btn">Copy</button>
@@ -133,17 +192,210 @@
 
         <div class="command-card">
           <h2>10. git merge</h2>
-          <p>Merges the changes from another branch into your current branch. Commonly used in feature integrations.</p>
+          <p>
+            Merges the changes from another branch into your current branch.
+            Commonly used in feature integrations.
+          </p>
           <div class="code-block">
             <code>git merge &lt;branch-name&gt;</code>
             <button class="copy-btn">Copy</button>
           </div>
         </div>
+
+        <div class="command-card">
+          <h2>11. git reset</h2>
+          <p>Resets the current HEAD to the specified state.</p>
+          <div class="code-block">
+            <code>git reset --hard HEAD~1</code>
+            <button class="copy-btn">Copy</button>
+        </div>
       </div>
+      <div class="command-card">
+        <h2>12. git config</h2>
+        <p>
+          Configures Git settings like username and email globally or locally.
+        </p>
+        <div class="code-block">
+          <code>git config --global user.name "Your Name"</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>13. git remote -v</h2>
+        <p>Lists remote connections for your repository.</p>
+        <div class="code-block">
+          <code>git remote -v</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>14. git fetch</h2>
+        <p>Downloads commits, files, and refs from a remote repository.</p>
+        <div class="code-block">
+          <code>git fetch</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>15. git log</h2>
+        <p>Displays the commit history of the current branch.</p>
+        <div class="code-block">
+          <code>git log</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>16. git diff</h2>
+        <p>Shows changes between commits, commit and working tree, etc.</p>
+        <div class="code-block">
+          <code>git diff</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>17. git rm</h2>
+        <p>
+          Deletes tracked files from the working directory and stages the
+          removal.
+        </p>
+        <div class="code-block">
+          <code>git rm &lt;filename&gt;</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>18. git mv</h2>
+        <p>Moves or renames a file or directory.</p>
+        <div class="code-block">
+          <code>git mv oldname.txt newname.txt</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>19. git stash</h2>
+        <p>Saves your changes temporarily without committing them.</p>
+        <div class="code-block">
+          <code>git stash</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>20. git stash pop</h2>
+        <p>
+          Applies the most recently stashed changes and removes them from the
+          stash list.
+        </p>
+        <div class="code-block">
+          <code>git stash pop</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>21. git tag</h2>
+        <p>Tags a specific commit, useful for marking release points.</p>
+        <div class="code-block">
+          <code>git tag v1.0</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>22. git cherry-pick</h2>
+        <p>Applies the changes from a specific commit to the current branch.</p>
+        <div class="code-block">
+          <code>git cherry-pick &lt;commit-hash&gt;</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>23. git revert</h2>
+        <p>Reverts a previous commit by creating a new one.</p>
+        <div class="code-block">
+          <code>git revert &lt;commit-hash&gt;</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>24. git clean</h2>
+        <p>Removes untracked files from your working directory.</p>
+        <div class="code-block">
+          <code>git clean -f</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>25. git blame</h2>
+        <p>Shows who made each change to a file and when.</p>
+        <div class="code-block">
+          <code>git blame &lt;file&gt;</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>26. git shortlog</h2>
+        <p>Summarizes git log output by author.</p>
+        <div class="code-block">
+          <code>git shortlog</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>27. git show</h2>
+        <p>Displays information about a commit, tag, or other git object.</p>
+        <div class="code-block">
+          <code>git show &lt;commit-hash&gt;</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>28. git archive</h2>
+        <p>Creates a tar or zip archive of files in the repo.</p>
+        <div class="code-block">
+          <code>git archive --format=zip HEAD > latest.zip</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>29. git rebase</h2>
+        <p>Reapplies commits on top of another base tip.</p>
+        <div class="code-block">
+          <code>git rebase main</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="command-card">
+        <h2>30. git reflog</h2>
+        <p>Shows the history of all HEAD changes.</p>
+        <div class="code-block">
+          <code>git reflog</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
     </section>
+    <button id="loadMoreBtn">Load More</button>
+
 
     <!-- Theme Toggle Script -->
     <script>
+      // Theme Toggle
       const themeToggle = document.getElementById("theme-toggle");
       const body = document.body;
 
@@ -157,13 +409,11 @@
         if (body.classList.contains("light-theme")) {
           localStorage.setItem("theme", "light-theme");
         } else {
-          localStorage.setItem("theme", "");
+          localStorage.removeItem("theme");
         }
       });
-    </script>
 
-    <!-- Copy to Clipboard Script -->
-    <script>
+      // Copy to Clipboard
       const copyButtons = document.querySelectorAll(".copy-btn");
 
       copyButtons.forEach((btn) => {
@@ -177,13 +427,64 @@
           });
         });
       });
+
+      // Search Functionality
+      const searchInput = document.getElementById("commandSearch");
+      const cards = document.querySelectorAll(".command-card");
+
+      searchInput.addEventListener("input", () => {
+        const term = searchInput.value.toLowerCase();
+        let anyMatch = false;
+        let matchingCards = 0;
+
+        cards.forEach((card, index) => {
+          const title = card.querySelector("h2")?.textContent.toLowerCase();
+          const desc = card.querySelector("p")?.textContent.toLowerCase();
+          const match = title.includes(term) || desc.includes(term);
+          card.style.display = match ? "block" : "none";
+          if (match) {
+            anyMatch = true;
+            matchingCards++;
+          }
+        });
+
+        // Only show the 'Load More' button if there are still matching cards to show
+        if (!anyMatch || matchingCards <= visibleCount) {
+          loadMoreBtn.style.display = "none";
+        } else {
+          loadMoreBtn.style.display = "block";
+        }
+      });
+
+      // Load More Functionality
+      const loadMoreBtn = document.getElementById("loadMoreBtn");
+      let visibleCount = 10;
+
+      function showCards(count) {
+        cards.forEach((card, index) => {
+          card.style.display = index < count ? "block" : "none";
+        });
+
+        if (count >= cards.length) {
+          loadMoreBtn.style.display = "none";
+        }
+      }
+
+      showCards(visibleCount);
+
+      loadMoreBtn.addEventListener("click", () => {
+        visibleCount += 5;
+        showCards(visibleCount);
+      });
     </script>
 
     <!-- Footer Section -->
     <div class="container-footer">
       <section class="newsletter">
         <h2>Explore Your Potential</h2>
-        <p>Get the best out of your potential with us! Let us know how you feel.</p>
+        <p>
+          Get the best out of your potential with us! Let us know how you feel.
+        </p>
         <form class="email-form">
           <input type="email" placeholder="Enter your email here*" required />
           <button type="submit">Connect</button>
@@ -207,14 +508,16 @@
               <a
                 href="mailto:abhisheksharma7340733@gmail.com,aman8560856@gmail.com?subject=Inquiry&body=Hello%20there,%20I'd%20like%20to%20ask..."
                 target="_blank"
-              >Contact</a>
+                >Contact</a
+              >
             </li>
             <li>
               <a
                 href="mailto:abhisheksharma7340733@gmail.com,aman8560856@gmail.com?subject=Inquiry&body=Hello%20there,%20I'd%20like%20to%20ask..."
                 target="_blank"
                 id="support"
-              >Email us at: Support@GitInsights.co.in</a>
+                >Email us at: Support@GitInsights.co.in</a
+              >
             </li>
           </ul>
         </div>

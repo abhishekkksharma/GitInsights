@@ -146,6 +146,7 @@ body:not(.light-theme) .badge {
 .commands-container {
   max-width: 1000px;
   margin: auto;
+  padding: 0 20px;
 }
 
 .commands-container h1 {
@@ -158,14 +159,15 @@ body:not(.light-theme) .badge {
 .command-card {
   background-color: #fff;
   padding: 20px 30px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-width: 1000px;
   border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   transition: 0.3s;
 }
 
 .command-card:hover {
-  /* transform: translateY(-5px); */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -189,16 +191,16 @@ body:not(.light-theme) .badge {
   margin-top: 5px;
   font-size: 0.95rem;
 }
+
 .code-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #f5f5f5;
-    padding: 8px 12px;
-    border-radius: 8px;
-    margin-top: 8px;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
 
 .copy-btn {
   padding: 4px 10px;
@@ -214,6 +216,76 @@ body:not(.light-theme) .badge {
 .copy-btn:hover {
   background-color: #0056b3;
 }
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 100px auto 0; /* Adjusted margin for centering */
+  width: 100%;
+}
+
+#commandSearch {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 500px; /* Limit search box width */
+  font-size: 16px;
+}
+
+#loadMoreBtn {
+  margin: 50px auto 0;
+  padding: 12px 25px;
+  display: block;
+  background-color: #4e60ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: auto;
+}
+
+#loadMoreBtn:hover {
+  background-color: #3b4ad9;
+}
+
+/* Ensure card layout adjusts properly on smaller screens */
+@media (max-width: 768px) {
+  .commands-container {
+    padding: 0 15px;
+  }
+
+  .command-card {
+    padding: 15px;
+    width: 90%; /* Allow card to take full width */
+    max-width: none; /* Remove max-width restriction */
+  }
+
+  .search-container {
+    margin: 100px auto 0; /* Adjust search container margin for mobile */
+  }
+
+  #commandSearch {
+    width: 90%; /* Take up more space on small screens */
+  }
+
+  #loadMoreBtn {
+    width: 90%; /* Button takes more width on small screens */
+  }
+
+  /* Ensure the cards are stacked on top of each other in smaller screen sizes */
+  .command-card {
+    margin-bottom: 20px;
+  }
+
+  /* Fixing the padding and margins for buttons and elements on mobile */
+  #loadMoreBtn {
+    padding: 12px 20px; /* Consistent button padding */
+  }
+}
+
 
 /* Footer Bottom */
 
@@ -337,14 +409,20 @@ footer {
     height: 35px;
     align-self: center;
   }
+
   .navbar-items :hover {
     padding: 0px;
   }
-  .cards {
-    margin-top: 100px;
+  .commands-container{
+    /* margin-right: 25px; */
+    margin-top: 0px;
   }
   .container-footer {
     margin-top: 100px;
+  }
+  .search-container{
+    margin-top: 100px;
+    margin-bottom: 0px;
   }
 
   .email-form input[type="email"] {
