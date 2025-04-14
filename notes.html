@@ -406,11 +406,19 @@
 
             // --- Git/GitHub Specific Responses (No changes needed here) ---
             if (lowerCaseMessage.includes('hello') || lowerCaseMessage.includes('hi')) {
-                return 'Hi there! Ready to learn about Git or GitHub? Ask away!';
-            } else if (lowerCaseMessage.includes('what is git') || lowerCaseMessage.includes("what's git") || lowerCaseMessage.includes("explain git")) {
-                return 'Git is a distributed version control system. It tracks changes in your code, allowing you to revert to previous versions and collaborate with others effectively.';
-            } else if (lowerCaseMessage.includes('what is github') || lowerCaseMessage.includes("what's github") || lowerCaseMessage.includes("explain github")) {
+              return 'Hi there! Ready to learn about Git or GitHub? Ask away!';
+            } else if (
+              lowerCaseMessage.includes("what's github") || 
+              lowerCaseMessage.includes('what is github') || 
+              lowerCaseMessage.includes("explain github")
+            ) {
                 return 'GitHub is a web-based platform that hosts Git repositories. It provides tools for collaboration, code review, project management, and more.';
+            } else if (
+              lowerCaseMessage.includes('what is git') || 
+              lowerCaseMessage.includes("what's git") || 
+              lowerCaseMessage.includes("explain git")
+            ) {
+                return 'Git is a distributed version control system. It tracks changes in your code, allowing you to revert to previous versions and collaborate with others effectively.';
             } else if (lowerCaseMessage.includes('clone')) {
                 return '`git clone [repository URL]` copies an existing Git repository from a remote source (like GitHub) to your local machine.';
             } else if (lowerCaseMessage.includes('commit')) {
@@ -427,8 +435,32 @@
                 return '`git add [file-name]` or `git add .` stages changes in your working directory, preparing them to be included in the next commit.';
             } else if (lowerCaseMessage.includes('status')) {
                 return '`git status` shows the current state of your working directory and staging area – which files are modified, staged, or untracked.';
+            } else if (lowerCaseMessage.includes('init')) { // New prompt
+                return '`git init` initializes a new, empty Git repository in the current directory. It creates the hidden `.git` folder where Git stores all its tracking information.';
+            } else if (lowerCaseMessage.includes('remote')) { // New prompt
+                return '`git remote` manages connections to remote repositories. `git remote -v` shows current remotes. `git remote add [name] [URL]` adds a new remote (e.g., `origin` for GitHub).';
+            } else if (lowerCaseMessage.includes('fetch vs pull') || lowerCaseMessage.includes('pull vs fetch') || lowerCaseMessage.includes('difference fetch pull')) { // New prompt
+                return '`git fetch` downloads remote changes but doesn\'t merge them. `git pull` does both: it fetches the changes *and* merges them into your current local branch (like `git fetch` followed by `git merge`).';
+            } else if (lowerCaseMessage.includes('fetch')) { // New prompt (place after more specific 'fetch vs pull')
+                return '`git fetch [remote-name]` downloads commits, files, and refs from a remote repository into your local repo, but *doesn\'t* merge them into your working branch. It lets you see what others have done before merging.';
+            } else if (lowerCaseMessage.includes('diff')) { // New prompt
+                return '`git diff` shows changes between commits, commit and working tree, etc. By default, it shows unstaged changes (changes not yet added with `git add`). `git diff --staged` shows staged changes.';
+            } else if (lowerCaseMessage.includes('log') || lowerCaseMessage.includes('history')) { // New prompt
+                return '`git log` displays the commit history for the current branch, showing commit IDs (hashes), authors, dates, and commit messages.';
+            } else if (lowerCaseMessage.includes('gitignore')) { // New prompt
+                return 'A `.gitignore` file specifies intentionally untracked files that Git should ignore (e.g., build artifacts, log files, dependency folders like `node_modules`). Files listed in `.gitignore` won\'t be staged or committed.';
+            } else if (lowerCaseMessage.includes('pull request') || lowerCaseMessage.includes('pr')) { // New prompt
+                return 'A Pull Request (PR) is a GitHub feature. It\'s a way to propose changes to a repository. You make changes on a branch, push it, and then open a PR to ask maintainers to review and merge your changes into the main branch.';
+            } else if (lowerCaseMessage.includes('fork') || lowerCaseMessage.includes('forking')) { // New prompt
+                return 'Forking (on GitHub/GitLab etc.) creates your own personal copy of someone else\'s repository. This allows you to experiment freely without affecting the original project. You can later propose changes back via a Pull Request.';
+            } else if (lowerCaseMessage.includes('staging area') || lowerCaseMessage.includes('index') || lowerCaseMessage.includes('stage')) { // New prompt
+                return 'The Staging Area (or Index) in Git is an intermediate area where you prepare changes before committing them. You use `git add` to move changes from your working directory to the staging area.';
+            } else if (lowerCaseMessage.includes('head')) { // New prompt
+                return 'In Git, `HEAD` is a pointer that usually refers to the tip (latest commit) of the currently checked-out branch. It represents what your working directory is based on.';
             } else if (lowerCaseMessage.includes('thank')) {
                 return 'You\'re welcome! Happy coding with Git!';
+            } else if (lowerCaseMessage.includes('list')) {
+              return "Here is the list of commands/topics : what is git, what's git, explain git, what is github, what's github, explain github, clone, commit, push, pull, branch, branching, merge, merging, add, status, init, remote, fetch vs pull, pull vs fetch, difference fetch pull, fetch, diff, log, history, gitignore, pull request, pr, fork, forking, staging area, index, stage, head. ";
             } else if (lowerCaseMessage.includes('bye')) {
                 return 'Goodbye! Feel free to ask more Git/GitHub questions anytime.';
             } else {

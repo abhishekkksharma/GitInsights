@@ -343,8 +343,8 @@ body:not(.light-theme) .badge {
   width: 350px; /* Chatbot window width */
   height: 450px; /* Chatbot window height */
   /* Glassmorphism */
-  background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
-  backdrop-filter: blur(15px) saturate(180%); /* Blur effect */
+  background-color: rgba(255, 255, 255, .5); /* Semi-transparent white */
+  backdrop-filter: blur(15px) saturate(150%); /* Blur effect */
   -webkit-backdrop-filter: blur(15px) saturate(180%); /* Safari support */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle white border */
 
@@ -359,7 +359,7 @@ body:not(.light-theme) .badge {
 /* Chatbot Header */
 .chatbot-header {
   /* Slightly more opaque for readability */
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 16px;
   display: flex;
   justify-content: space-between;
