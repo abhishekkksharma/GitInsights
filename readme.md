@@ -2,7 +2,7 @@
 
 **Master Git & GitHub: Track, Collaborate, and Code Like a Pro**
 
-![GitInsights Banner](https://gitinsights-beta.vercel.app/banner.png)
+![GitInsights Banner](images/logo.png)
 
 [🔗 Live Website](https://gitinsights-beta.vercel.app/)
 
