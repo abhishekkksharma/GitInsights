@@ -41,19 +41,13 @@ Meet the team behind GitInsights:
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home](https://gitinsights-beta.vercel.app/screenshots/home.png)
+![Home](images\Home.png)
 
 ### 📘 Notes Page
-![Notes](https://gitinsights-beta.vercel.app/screenshots/notes.png)
+![Notes](images\Notes.png)
 
-### 📄 Readme Generator
-![Readme](https://gitinsights-beta.vercel.app/screenshots/readme-gen.png)
+### 📄 Commands list page
+![Readme](images\Commands.png)
 
 ---
 
-## 🛠️ Installation & Setup
-
-1. Clone the repo:
-
-   ```bash
-   git clone https://github.com/your-username/gitinsights.git
