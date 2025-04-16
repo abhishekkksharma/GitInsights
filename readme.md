@@ -41,13 +41,13 @@ Meet the team behind GitInsights:
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home](images\Home.png)
+![Home](images/Home.png)
 
 ### 📘 Notes Page
-![Notes](images\Notes.png)
+![Notes](images/Notes.png)
 
 ### 📄 Commands list page
-![Readme](images\Commands.png)
+![Readme](images/Commands.png)
 
 ---
 
