@@ -401,11 +401,11 @@ line-height: 1.6;
             border: none; /* Ensure no default border */
         }
         .close-button:hover {
-            background-color: rgba(255, 255, 255, 0.3); /* Lighter on hover */
+            background-color: rgba(120, 118, 118, 0.3); /* Lighter on hover */
         }
          .close-button svg {
              display: block; /* Prevents extra space */
-             color: #ffffff; /* White icon */
+             color: #303030; /* White icon */
              width: 20px; /* Explicit size */
              height: 20px; /* Explicit size */
          }
