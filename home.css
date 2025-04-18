@@ -95,9 +95,11 @@ body:not(.light-theme) .badge {
   color: white;
 }
 
+/* User's Navbar CSS - Kept as provided */
 .navbar {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
   border-radius: 20px;
   padding: 5px 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -119,39 +121,64 @@ body:not(.light-theme) .badge {
 
 .navbar-items {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* Distributes items evenly */
   align-items: center;
   width: 100%;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
 }
 
+/* --- CSS Modifications for SVG --- */
 .navbar-icon {
-  width: 35px; /* You can adjust the size */
-  height: 35px;
-  border-radius: 18px;
-  /* opacity: .7; */
+  width: 24px; /* Adjusted size for typical line icons */
+  height: 24px;
+  /* border-radius removed - not needed for SVGs */
+  /* opacity removed - handled by stroke/fill */
+  stroke-width: 1.5; /* Control line thickness */
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
+
 .navbar-item span {
-  margin-left: 8px;
+  margin-left: 8px; /* Kept user's spacing */
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .navbar-item {
-  color: rgb(
-    255,
-    255,
-    255
-  ); /* White text for better contrast on dark background */
+  color: rgb(255, 255, 255); /* White text */
   text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 20px;
+  padding: 10px 15px; /* Kept user's padding */
+  border-radius: 15px; /* Slightly adjusted for aesthetics */
   transition: background 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 8px; /* Kept user's gap */
 }
 
 .navbar-item:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.4); /* Kept user's hover */
 }
+
+/* Style for the theme toggle button (similar to links) */
+.theme-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px; /* Make clickable area slightly larger */
+   border-radius: 50%; /* Make it circular */
+}
+.theme-toggle-button:hover {
+   background: rgba(255, 255, 255, 0.4);
+}
+/* Hide the span visually but keep for accessibility if needed later */
+.theme-toggle-button span {
+  display: none;
+}
+/* Ensure theme toggle icon size is consistent */
+.theme-toggle-button .navbar-icon {
+   width: 24px;
+   height: 24px;
+   margin: 0; /* Remove margin if only icon is shown */
+}
+
 
 /* Hide menu toggle button */
 .menu-toggle {
@@ -450,19 +477,6 @@ body:not(.light-theme) .badge {
 .testimonial-box .social-icons img:hover {
   transform: scale(1.2);
 }
-
-
-
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 30px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-}
-
 /* Footer Bottom */
 
 .container-footer {
@@ -571,6 +585,8 @@ footer {
   }
 }
 
+
+
 /* Responsive Styles for Mobile */
 @media (max-width: 1200px) {
   .navbar {
@@ -602,6 +618,17 @@ footer {
 
   .navbar-item {
     padding: 0px;
+  }
+
+  /* Add this to maintain icon size */
+  .navbar-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .theme-toggle-button .navbar-icon {
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -652,7 +679,7 @@ footer {
   }
   .parent h1 {
     font-size: 8px;
-  } 
+  }
   .div6{
     display:none;
   }
@@ -683,25 +710,40 @@ footer {
     font-size: 24px;
    }
    .sub-heading {
-   font-size: 14px;
-   
+    font-size: 14px;
+
    }
-   
+
   .testimonials-container {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     margin-top: 0px;
-}
+  }
 
-.testimonial-box {
+  .testimonial-box {
     margin-bottom: 20px;
     margin-left: 16%;
     margin-right: 16%;
 
+  }
+
+  /* Add this to maintain icon size */
+  .navbar-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .theme-toggle-button .navbar-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+.navbar-icon {
+  width: 24px;
+  height: 24px;
 }
 
+.theme-toggle-button .navbar-icon {
+  width: 24px;
+  height: 24px;
 }
-
-
-
-
