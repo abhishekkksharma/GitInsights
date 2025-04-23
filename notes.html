@@ -554,6 +554,13 @@
         ) {
           // New prompt
           return "The Staging Area (or Index) in Git is an intermediate area where you prepare changes before committing them. You use `git add` to move changes from your working directory to the staging area.";
+        } else if (
+          lowerCaseMessage.includes("fuck you") ||
+          lowerCaseMessage.includes("chutiya") ||
+          lowerCaseMessage.includes("fuck")
+        ) {
+          // New prompt
+          return "Please use appropriate language and try to make the world a better place!";
         } else if (lowerCaseMessage.includes("head")) {
           // New prompt
           return "In Git, `HEAD` is a pointer that usually refers to the tip (latest commit) of the currently checked-out branch. It represents what your working directory is based on.";
