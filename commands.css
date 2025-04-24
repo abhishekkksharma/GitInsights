@@ -181,7 +181,9 @@ body:not(.light-theme) .badge {
 .commands-container h1 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 40px;
+  margin-top: -30px;
+  margin-bottom: 20px;
+
   color: #F8F4E1;
 }
 
