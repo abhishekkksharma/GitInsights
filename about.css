@@ -182,6 +182,7 @@ body.light-theme {
   
   .about-container h1 {
     font-size: 2.5rem;
+    margin-top: -12px;
     margin-bottom: 20px;
     color: #2e3a59;
     text-align: center;
