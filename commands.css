@@ -326,6 +326,7 @@ body:not(.light-theme) .badge {
   width: 100%;
    /* Optional: Limit max width on very large screens */
   margin: 0 auto; /* Center the container */
+  margin-top: 100px;
   padding: 40px 20px 20px 20px; /* Added more top padding */
   background-color: white;
   box-sizing: border-box; /* Include padding in width calculation */
