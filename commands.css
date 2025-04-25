@@ -321,95 +321,284 @@ body:not(.light-theme) .badge {
 
 /* Footer Bottom */
 
+/* Footer Container */
 .container-footer {
-  margin: 0 auto;
-  padding: 20px;
+  width: 100%;
+   /* Optional: Limit max width on very large screens */
+  margin: 0 auto; /* Center the container */
+  padding: 40px 20px 20px 20px; /* Added more top padding */
   background-color: white;
-  margin-top: 200px;
+  box-sizing: border-box; /* Include padding in width calculation */
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+/* Newsletter Section */
 .newsletter {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px; /* Increased spacing */
 }
 
 .newsletter h2 {
   font-size: 24px;
   font-weight: 600;
   color: black;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
+  letter-spacing: 1px; /* Adjusted spacing */
+  margin-bottom: 15px; /* Increased spacing */
   text-align: center;
 }
 
 .newsletter p {
-  margin-bottom: 20px;
+  margin-bottom: 25px; /* Increased spacing */
+  color: #555; /* Slightly darker text */
+  padding: 0 10px; /* Add horizontal padding for text */
+  max-width: 600px; /* Limit width of paragraph */
+  margin-left: auto; /* Center paragraph */
+  margin-right: auto; /* Center paragraph */
 }
 
+/* Email Form */
 .email-form {
-  display: inline-flex;
-  border: 1px solid #333;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; /* Allow wrapping on very small screens if needed */
+  max-width: 500px; /* Limit form width */
+  margin: 0 auto; /* Center the form */
+  border: 1px solid #ccc; /* Lighter border */
+  border-radius: 8px; /* Rounded corners for the form */
+  overflow: hidden; /* Keep input/button inside rounded corners */
 }
 
 .email-form input[type="email"] {
-  padding: 10px;
+  padding: 12px 15px; /* Increased padding */
   border: none;
   outline: none;
-  width: 300px;
+  flex-grow: 1; /* Allow input to take available space */
+  min-width: 200px; /* Minimum width before wrapping */
   font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 8px 0 0 8px; /* Rounded corners on the left */
 }
 
 .email-form button {
-  padding: 10px 20px;
+  padding: 12px 25px; /* Increased padding */
   background-color: #000;
   color: #fff;
   border: none;
   cursor: pointer;
   font-size: 16px;
+  white-space: nowrap; /* Prevent button text wrapping */
+  border-radius: 0 8px 8px 0; /* Rounded corners on the right */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
+.email-form button:hover {
+  background-color: #333; /* Darker background on hover */
+}
+
+/* Main Footer Area */
 footer {
   display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-  border-top: 1px solid #ddd;
+  /* Removed justify-content: space-between; to rely on widths/margins */
+  flex-wrap: nowrap; /* Prevent wrapping by default */
+  padding: 30px 0; /* Increased padding */
+  border-top: 1px solid #eee; /* Lighter border */
+  margin-bottom: 30px; /* Adjusted spacing */
+  width: 100%; /* Ensure footer takes full width */
+  box-sizing: border-box;
 }
 
+/* Individual Footer Sections */
 .footer-section {
-  width: 30%;
+  /* Adjust width slightly less than 1/3 to account for padding/margins */
+  width: 33%;
+  padding: 0 10px; /* Reduced padding slightly */
+  box-sizing: border-box;
+  margin-bottom: 30px; /* Add space below each section */
+  /* Removed min-width to allow shrinking */
+  vertical-align: top; /* Align columns at the top */
 }
 
 .footer-section h3 {
   font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 600; /* Slightly bolder */
+  margin-bottom: 15px;
+  color: #333;
 }
 
 .footer-section ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-section ul li {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Reduced margin slightly */
 }
 
 .footer-section ul li a {
   text-decoration: none;
-  color: #333;
+  color: #555; /* Consistent text color */
   font-size: 14px;
-  margin-left: -40px;
+  transition: color 0.3s ease; /* Smooth hover effect */
+  display: inline-block; /* Needed for potential wrapping */
+  /* Allow long words (like email) to break */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all; /* More aggressive breaking if needed */
+}
+
+.footer-section ul li a:hover {
+  color: #000; /* Darker color on hover */
+  text-decoration: underline;
 }
 
 .footer-section.bio p {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.6; /* Adjusted line height */
   color: #666;
+  /* Allow text wrapping */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+/* Add specific styling for bio section heading if needed */
+.footer-section.bio h3 {
+  /* Keep consistent with other h3 or adjust as needed */
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
 }
 
+/* Copyright Area */
 .copyright {
   text-align: center;
-  font-size: 14px;
+  font-size: 13px; /* Slightly smaller */
   color: #aaa;
+  padding: 15px 0 0 0; /* Add padding above */
+  border-top: 1px solid #eee; /* Separator line */
+  margin-top: -10px; /* Adjust based on footer margin-bottom */
+}
+
+/* --- Responsive Styles --- */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+  /* Keep footer as flex, but ensure no wrap */
+  footer {
+    flex-wrap: nowrap;
+    padding: 20px 0; /* Adjust padding */
+  }
+
+  .footer-section {
+    /* Maintain 3 columns, adjust width if needed */
+    width: 33%;
+    padding: 0 8px; /* Further reduce padding */
+    /* Ensure text aligns left */
+    text-align: left;
+  }
+
+  .footer-section h3 {
+    font-size: 15px; /* Slightly smaller heading */
+    /* Ensure text aligns left */
+    text-align: left;
+  }
+  .footer-section ul {
+    /* Ensure list aligns left */
+    display: block;
+    text-align: left;
+  }
+  .footer-section ul li a {
+    font-size: 13px; /* Slightly smaller font */
+  }
+
+  .footer-section.bio p {
+    font-size: 13px; /* Slightly smaller font */
+    /* Ensure text aligns left */
+    text-align: left;
+  }
+}
+
+/* Small Screens (Mobiles) */
+@media (max-width: 480px) {
+  .container-footer {
+    padding: 30px 10px 15px 10px; /* Adjust padding for mobile */
+  }
+
+  footer {
+    flex-wrap: nowrap; /* Explicitly prevent wrapping */
+    padding: 15px 0; /* Adjust padding */
+    margin-bottom: 15px;
+  }
+
+  .newsletter h2 {
+    font-size: 20px; /* Smaller heading */
+  }
+
+  .newsletter p {
+    font-size: 13px; /* Smaller text */
+    margin-bottom: 20px;
+  }
+
+  /* Keep email form stacked for usability */
+  .email-form {
+    flex-direction: column;
+    border: none;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .email-form input[type="email"] {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .email-form button {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 8px;
+  }
+
+  /* Keep 3 columns, adjust width and padding */
+  .footer-section {
+    width: 33%; /* Maintain 3 columns */
+    padding: 0 5px; /* Minimal padding */
+    margin-bottom: 20px;
+    text-align: left; /* Align text left */
+  }
+
+  .footer-section h3 {
+    font-size: 14px; /* Smaller heading */
+    margin-bottom: 10px;
+    text-align: left; /* Align heading left */
+  }
+
+  .footer-section ul {
+    display: block;
+    text-align: left; /* Align list left */
+  }
+
+  .footer-section ul li {
+    margin-bottom: 8px; /* Reduce list item margin */
+  }
+
+  .footer-section ul li a {
+    font-size: 12px; /* Smaller link font */
+  }
+
+  .footer-section.bio p {
+    font-size: 12px; /* Smaller bio font */
+    line-height: 1.5;
+    text-align: left; /* Align bio text left */
+  }
+
+  .copyright {
+    font-size: 11px; /* Even smaller copyright */
+    margin-top: 5px;
+    padding-top: 10px;
+  }
 }
 
 @media (max-width: 768px) {
