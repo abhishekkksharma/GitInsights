@@ -31,7 +31,7 @@ Meet the team behind GitInsights:
 |------------|----------------------------------|----------------------------------|
 | **Abhishek**   | [GitHub](https://github.com/abhishekkksharma) | [LinkedIn](https://linkedin.com) |
 | **Aman Singh** | [GitHub](https://github.com/Amxn-7)               | [LinkedIn](https://linkedin.com) |
-| **Aditya**       | [GitHub](https://github.com)               | [LinkedIn](https://linkedin.com) |
+| **Aditya**       | [GitHub](https://github.com/addy0019)               | [LinkedIn](https://linkedin.com) |
 | **Mridul**     | [GitHub](https://github.com)               | [LinkedIn](https://linkedin.com) |
 
 > Developed as a team project for learning Source Code Management & collaboration.
