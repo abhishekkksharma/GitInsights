@@ -131,7 +131,9 @@ display: flex;
 align-items: center;
 gap: 8px; /* Kept user's gap */
 }
-
+.notes-icon{
+  background: rgba(255, 255, 255, 0.4); /* Kept user's hover */
+}
 .navbar-item:hover {
 background: rgba(255, 255, 255, 0.4); /* Kept user's hover */
 }
@@ -615,7 +617,7 @@ line-height: 1.6;
 }
 
 .email-form button:hover {
-  background-color: #000000; /* Darker background on hover */
+  background-color: #333; /* Darker background on hover */
 }
 
 /* Main Footer Area */
@@ -696,7 +698,7 @@ footer {
 .copyright {
   text-align: center;
   font-size: 13px; /* Slightly smaller */
-  color: #484242;
+  color: #aaa;
   padding: 15px 0 0 0; /* Add padding above */
   border-top: 1px solid #eee; /* Separator line */
   margin-top: -10px; /* Adjust based on footer margin-bottom */
