@@ -151,6 +151,9 @@ body:not(.light-theme) .badge {
   align-items: center;
   gap: 8px; /* Kept user's gap */
 }
+.home-icon{
+  background: rgba(255, 255, 255, 0.4); /* Kept user's hover */
+}
 
 .navbar-item:hover {
   background: rgba(255, 255, 255, 0.4); /* Kept user's hover */
