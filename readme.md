@@ -52,5 +52,8 @@ Meet the team behind GitInsights:
 ### 📄 About Section page
 ![About](images/About.png)
 
+### 📄 Login page
+![Sign Up](images/login.png)
+
 ---
 
