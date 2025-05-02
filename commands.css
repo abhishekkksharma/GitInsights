@@ -107,6 +107,9 @@ body:not(.light-theme) .badge {
   width: 100%;
   flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
   }
+  .commands-icon{
+    background: rgba(255, 255, 255, 0.4); /* Kept user's hover */
+  }
   
   /* --- CSS Modifications for SVG --- */
   .navbar-icon {
