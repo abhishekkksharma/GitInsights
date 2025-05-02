@@ -30,7 +30,7 @@ Meet the team behind GitInsights:
 | Name       | GitHub                           | LinkedIn                        |
 |------------|----------------------------------|----------------------------------|
 | **Abhishek**   | [GitHub](https://github.com/abhishekkksharma) | [LinkedIn](https://linkedin.com) |
-| **Aman Singh** | [GitHub](https://github.com)               | [LinkedIn](https://linkedin.com) |
+| **Aman Singh** | [GitHub](https://github.com/Amxn-7)               | [LinkedIn](https://linkedin.com) |
 | **Aditya**       | [GitHub](https://github.com)               | [LinkedIn](https://linkedin.com) |
 | **Mridul**     | [GitHub](https://github.com)               | [LinkedIn](https://linkedin.com) |
 
