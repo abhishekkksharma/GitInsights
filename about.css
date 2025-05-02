@@ -502,7 +502,7 @@ footer {
 
   .footer-section.bio p {
     font-size: 12px; /* Smaller bio font */
-    line-height: 1.5;
+    line-height: 2.0;
     text-align: left; /* Align bio text left */
   }
 
