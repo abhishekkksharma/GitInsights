@@ -49,5 +49,8 @@ Meet the team behind GitInsights:
 ### 📄 Commands list page
 ![Readme](images/Commands.png)
 
+### 📄 About Section page
+![About](images/About.png)
+
 ---
 
