@@ -696,7 +696,7 @@ footer {
 .copyright {
   text-align: center;
   font-size: 13px; /* Slightly smaller */
-  color: #aaa;
+  color: #484242;
   padding: 15px 0 0 0; /* Add padding above */
   border-top: 1px solid #eee; /* Separator line */
   margin-top: -10px; /* Adjust based on footer margin-bottom */
