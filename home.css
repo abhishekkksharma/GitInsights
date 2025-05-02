@@ -59,7 +59,7 @@ html {
 }
 body {
   margin: 0;
-  height: 120vh;
+  height: 100vh;
   font-family: monospace;
   background-color: black;
   /* background: radial-gradient(
