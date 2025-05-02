@@ -753,8 +753,8 @@ footer {
 /* Responsive Styles for Mobile */
 @media (max-width: 1200px) {
   .navbar {
-    left: 10%;
-    right: 10%;
+    left: 11%;
+    right: 11%;
     align-self: center;
   }
   .navbar-items {
