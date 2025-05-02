@@ -9,7 +9,7 @@ body.light-theme .navbar {
 }
 
 body.light-theme .navbar-item {
-  color: rgb(0, 0, 0); /* Black text for light theme */
+  color: rgb(0, 0, 1); /* Black text for light theme */
 }
 
 body.light-theme .navbar-item:hover {
