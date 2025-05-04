@@ -278,3 +278,389 @@
     </script>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitInsights - Login/Signup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1e1e1e, #2c3e50); /* Dark theme gradient */
+      color: #fff;
+      transition: background 0.5s ease, color 0.5s ease;
+      position: relative;
+      padding: 40px 20px; /* Added padding to body for more space around container */
+    }
+
+    /* Light theme */
+    body.light-theme {
+      background: rgb(212, 204, 204);
+      /* background: linear-gradient(135deg,rgb(212, 204, 204), rgb(212, 204, 204)); */
+      color: #333;
+    }
+
+    /* Main container */
+    .container {
+      width: 90%;
+      max-width: 450px; /* Slightly wider for more space */
+      min-width: 300px; /* Adjusted for small screens */
+      background: rgba(0, 0, 0, 0.7); /* Slightly more transparent for softness */
+      border-radius: 20px; /* Softer corners */
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Softer shadow */
+      transition: background 0.5s ease;
+      padding: 40px 30px; /* Increased padding for airiness */
+    }
+
+    .light-theme .container {
+      background: rgba(255, 255, 255, 0.85); /* Slightly more transparent */
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Form wrapper for transitions */
+    .form-wrapper {
+      position: relative;
+      height: 550px; /* Increased height to accommodate more padding */
+      transition: all 0.5s ease;
+    }
+
+    /* Form styles */
+    .form {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 50px 40px; /* Increased padding for forms */
+      opacity: 0;
+      transform: translateX(100%);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .form.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .form.inactive {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    .signup-form, .login-form {
+      background: transparent;
+    }
+
+    /* Form title */
+    .form h2 {
+      font-size: 2.2em; /* Slightly larger for prominence */
+      text-align: center;
+      margin-bottom: 30px; /* More space below title */
+      color: #fff;
+    }
+
+    .light-theme .form h2 {
+      color: #2c3e50;
+    }
+
+    /* Input fields */
+    .input-group {
+      margin-bottom: 30px; /* Increased spacing between inputs */
+      position: relative;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px; /* More padding for inputs */
+      border: none;
+      border-radius: 8px; /* Softer input corners */
+      background: #fff;
+      color: #333;
+      font-size: 1em;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
+
+    input:focus {
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
+
+    input::placeholder {
+      color: #999;
+    }
+
+    /* Button styles */
+    button {
+      width: 100%;
+      padding: 15px; /* More padding for buttons */
+      border: none;
+      border-radius: 8px; /* Softer button corners */
+      background: #007bff;
+      color: #fff;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 20px; /* Added margin for spacing */
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .light-theme button {
+      background: #2c3e50;
+    }
+
+    .light-theme button:hover {
+      background: #1a252f;
+    }
+
+    /* Toggle link */
+    .toggle-link {
+      text-align: center;
+      margin-top: 25px; /* More space above toggle link */
+    }
+
+    .toggle-link a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .toggle-link a:hover {
+      text-decoration: underline;
+    }
+
+    .light-theme .toggle-link a {
+      color: #2c3e50;
+    }
+
+    /* Theme toggle button */
+    .theme-toggle-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 45px; /* Slightly larger */
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border: none;
+      font-size: 1.3em; /* Slightly larger icon */
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .theme-toggle-button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .light-theme .theme-toggle-button {
+      background: rgba(0, 0, 0, 0.1);
+      color: #333;
+    }
+
+    .light-theme .theme-toggle-button:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 600px) {
+      body {
+        padding: 30px 15px; /* Slightly less padding */
+      }
+
+      .container {
+        width: 95%;
+        padding: 30px 20px; /* Reduced padding */
+      }
+
+      .form-wrapper {
+        height: 500px; /* Adjusted height */
+      }
+
+      .form {
+        padding: 40px 30px; /* Slightly less padding */
+      }
+
+      .form h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+      }
+
+      input, button {
+        padding: 12px;
+        font-size: 0.9em;
+      }
+
+      .input-group {
+        margin-bottom: 25px;
+      }
+
+      .theme-toggle-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .container {
+        width: 98%;
+        min-width: 280px;
+        padding: 25px 15px; /* Further reduced padding */
+      }
+
+      .form-wrapper {
+        height: 460px; /* Smaller height */
+      }
+
+      .form {
+        padding: 30px 20px; /* Further reduced padding */
+      }
+
+      .form h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+      }
+
+      input, button {
+        padding: 10px;
+        font-size: 0.85em;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      .toggle-link {
+        font-size: 0.9em;
+        margin-top: 20px;
+      }
+
+      .theme-toggle-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle-button" id="theme-toggle" aria-label="Switch to Light Theme">☀</button>
+
+  <div class="container">
+    <div class="form-wrapper">
+      <div class="form signup-form active" id="signup-form">
+        <h2>Sign Up</h2>
+        <form>
+          <div class="input-group">
+            <input type="text" name="txt" placeholder="User name" required>
+          </div>
+          <div class="input-group">
+            <input type="email" name="email" placeholder="Email" required>
+          </div>
+          <div class="input-group">
+            <input type="password" name="pswd" placeholder="Password" required>
+          </div>
+          <button type="submit">Sign Up</button>
+          <div class="toggle-link">
+            <a href="#" id="to-login">Already have an account? Login</a>
+          </div>
+        </form>
+      </div>
+      <div class="form login-form" id="login-form">
+        <h2>Login</h2>
+        <form>
+          <div class="input-group">
+            <input type="email" name="email" placeholder="Email" required>
+          </div>
+          <div class="input-group">
+            <input type="password" name="pswd" placeholder="Password" required>
+          </div>
+          <button type="submit">Login</button>
+          <div class="toggle-link">
+            <a href="#" id="to-signup">Don't have an account? Sign Up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Theme toggle functionality
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    function updateThemeIcon() {
+      if (body.classList.contains('light-theme')) {
+        themeToggleBtn.textContent = '🌙';
+        themeToggleBtn.setAttribute('aria-label', 'Switch to Dark Theme');
+      } else {
+        themeToggleBtn.textContent = '☀';
+        themeToggleBtn.setAttribute('aria-label', 'Switch to Light Theme');
+      }
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-theme');
+      updateThemeIcon();
+      localStorage.setItem('theme', body.classList.contains('light-theme') ? 'light' : 'dark');
+    });
+
+    // Apply saved theme
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light-theme');
+    }
+    updateThemeIcon();
+
+    // Form toggle with transition effects
+    const signupForm = document.getElementById('signup-form');
+    const loginForm = document.getElementById('login-form');
+    const toLoginLink = document.getElementById('to-login');
+    const toSignupLink = document.getElementById('to-signup');
+
+    function showLogin() {
+      signupForm.classList.remove('active');
+      signupForm.classList.add('inactive');
+      loginForm.classList.remove('inactive');
+      loginForm.classList.add('active');
+    }
+
+    function showSignup() {
+      loginForm.classList.remove('active');
+      loginForm.classList.add('inactive');
+      signupForm.classList.remove('inactive');
+      signupForm.classList.add('active');
+    }
+
+    toLoginLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      showLogin();
+    });
+
+    toSignupLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      showSignup();
+    });
+  </script>
+</body>
+</html>
